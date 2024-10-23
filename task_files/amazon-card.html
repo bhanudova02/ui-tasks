@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {
+            display: grid;
+            grid-template-columns: 3fr 3fr 3fr 3fr;
+            margin-top: -300px;
+        }
+
+        .card {
+            box-shadow: 2px 2px 2px black;
+            background-color: white;
+            padding: 20px;
+            margin: 6px;
+            font-family: Arial;
+            height: 342px;
+        }
+
+        .card-title {
+            font-size: 19.6px;
+            font-weight: bold;
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+            grid-gap: 10px;
+        }
+
+        .row-deals {
+            display: grid;
+            grid-template-columns: 12fr;
+            height: 96%;
+        }
+
+        .card-img {
+            width: 100%;
+        }
+
+        .card-img-deals {
+            width: 100%;
+            height: 100%;
+        }
+
+        .card-body p {
+            font-size: 12.5px;
+            margin: 0px 0px 16px 0px;
+            height: 24px;
+        }
+
+        .card-body {
+            margin-top: 16px;
+            margin-bottom: 10px;
+            height: 260px;
+        }
+
+        .card-body-deals {
+            margin-top: 16px;
+            margin-bottom: 10px;
+            height: 282px;
+        }
+
+        .card-footer {
+            font-weight: 600;
+            font-size: 14px;
+            color: #6DAEB9;
+        }
+
+
+        .last-card {
+            margin: 6px;
+            font-family: Arial;
+            height: 342px;
+        }
+
+        .col-1 {
+            height: 30%;
+            padding: 20px;
+            background-color: white;
+            font-size: 18.5px;
+            font-weight: 600;
+        }
+
+        .col-2 {
+            height: 70%;
+            display: flex;
+            justify-content: center;
+            align-items: end;
+        }
+
+        .col-2 img{
+            width: 96%;
+            height: 96%;
+        }
+
+        .card-btn-signin {
+            background-color: #FFD814;
+            border-radius: 20px;
+            padding: 6px;
+            text-align: center;
+            font-size: 14px;
+            margin: 10px 0px 18px 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="../images/amazon-banner.jpg" width="100%">
+    </header>
+    <section>
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">New deals added everyday</div>
+            </div>
+            <div class="card-body-deals">
+                <div class="row-deals">
+                    <img src="../images/shop_all_deals.jpg" class="card-img-deals">
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="deals">See all deals</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">Up to 75% off | Deals on Toys & games</div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div>
+                        <img src="../images/A_1.jpg" class="card-img">
+                        <p>Electric ride-ons | Starting &#8377; 23,299</p>
+                    </div>
+                    <div>
+                        <img src="../images/A_2.jpg" class="card-img">
+                        <p>Play-tents | Starting &#8377; 489</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <img src="../images/A_3.jpg" class="card-img">
+                        <p>Slides | Starting &#8377; 14,99</p>
+                    </div>
+                    <div>
+                        <img src="../images/A_4.jpg" class="card-img">
+                        <p>RC cars | Minimum 50% off</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="deals">See all deals</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">Minimum 50% off I Home, kitchen & more</div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div>
+                        <img src="../images/A_5.jpg" class="card-img">
+                        <p>Kitchen</p>
+                    </div>
+                    <div>
+                        <img src="../images/A_6.jpg" class="card-img">
+                        <p>Home decor</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <img src="../images/A_7.jpg" class="card-img">
+                        <p>Furniture</p>
+                    </div>
+                    <div>
+                        <img src="../images/A_8.jpg" class="card-img">
+                        <p>Home improvement</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="deals">See all deals</div>
+            </div>
+        </div>
+
+        <div class="last-card">
+            <div class="col-1">
+                <p>Sign in for your best experience</p>
+                <div class="card-btn-signin">Sign in securely</div>
+            </div>
+            <div class="col-2">
+               <img src="../images/A_9.jpg" >
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
