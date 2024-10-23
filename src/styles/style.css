@@ -1,72 +1,17 @@
-
-
-
-/* FlipCart Footer Css */
-footer {
-    background-color: #212121;
+body{
+    padding: 0px;
+    margin: 0px;
+}
+.flipkart-footer-container{
+    
+}
+.task-heading{
+    background-color: black;
     color: white;
-    padding: 50px;
+    padding: 10px;
+    width: fit-content;
+    margin: 10px auto 0px auto;
 }
 
-.row-1 {
-    display: grid;
-    grid-template-columns: 6fr 6fr;
-    font-family: sans-serif;
-}
 
-.left-panel {
-    display: grid;
-    grid-template-columns: 3fr 3fr 3fr 3fr;
-    padding-right: 30px;
-    font-weight: 600;
-}
 
-.right-panel {
-    display: grid;
-    grid-template-columns: 6fr 6fr;
-    padding-left: 30px;
-    border-left: 1px solid gray;
-}
-
-.service-title {
-    color: #848181;
-    display: block;
-    margin-bottom: 14px;
-    font-size: 13px;
-    font-weight: normal;
-}
-
-.service-title~span {
-    display: block;
-    margin-bottom: 10px;
-    font-size: 13px;
-}
-
-.shortcut-icons span {
-    margin-right: 20px;
-    font-size: 20px;
-}
-
-address {
-    font-style: normal;
-}
-
-aside {
-    margin-top: 20px;
-}
-
-.phone-number {
-    color: #224AE3;
-}
-
-.row-2 {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 26px;
-    border-top: 1px solid gray;
-    margin-top: 30px;
-}
-
-.bottom-shortcut-icon span {
-    color: gold;
-}

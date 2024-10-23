@@ -6,16 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css"> -->
     <style>
-       *{
-        margin: 0px;
-       }
-        .leet-code-container {
-            margin-top: 10px;
+        body {
             background-color: #0F0F0F;
             font-family: Arial;
             color: white;
-            padding: 10px;
         }
 
         header {
@@ -215,162 +211,154 @@
         .sub-header-icons span {
             margin-left: 10px;
         }
-
-        .right-panel-code samp {
+        .right-panel-code samp{
             color: #73862b;
         }
-
-        .right-panel-code var {
+        .right-panel-code var{
             font-style: normal;
             color: #2655B4;
         }
-
-        .function-first-line {
+        .function-first-line{
             color: #47BFB0;
         }
-
-        .var-ref-name {
+        .var-ref-name{
             color: #A7CE9E;
         }
-
-        .args {
+        .args{
             color: aquamarine;
         }
-
-        .return {
+        .return{
             color: palevioletred;
         }
     </style>
 </head>
 
 <body>
-    <main class="leet-code-container">
-        <header>
-            <div>
-                <span class="logo">JS</span>
-                <span> 30 Days of JavaScript </span>
-                <span class="bi bi-chevron-left"></span>
-                <span class="bi bi-chevron-right"></span>
-                <span class="bi bi-shuffle"></span>
-            </div>
-            <div class="run-bar">
-                <span class="bi bi-bug-fill"></span><span class="bi bi-play"> Run </span>
-                <span class="bi bi-cloud-upload"> Submit </span>&nbsp;<span class="bi bi-file"></span>
-            </div>
-            <div>
-                <span class="bi bi-ui-checks-grid"></span>
-                <span class="bi bi-gear"></span>
-                <span class="btn-register"> Register </span>
-                <span>or</span>
-                <span class="btn-sign-in">Sign in</span>
-                <span class="btn-premium"> Premium </span>
-            </div>
-        </header>
-        <section>
-            <div class="panel-left">
-                <div class="left-header">
-                    <div>
-                        <span class="bi bi-file-earmark-medical-fill"> <samp><b>Description</b> | </samp></span>
-                        <span class="bi bi-book"> <samp>Editorial | </samp></span>
-                        <span class="bi bi-funnel"> <samp>Solutions | </samp></span>
-                        <span class="bi bi-clock-history"> <samp>Submissions</samp></span>
-                    </div>
-                    <div>
-                        <span class="bi bi-box"></span>
-                        <span class="bi bi-chevron-left"></span>
-                    </div>
+    <header>
+        <div>
+            <span class="logo">JS</span>
+            <span> 30 Days of JavaScript </span>
+            <span class="bi bi-chevron-left"></span>
+            <span class="bi bi-chevron-right"></span>
+            <span class="bi bi-shuffle"></span>
+        </div>
+        <div class="run-bar">
+            <span class="bi bi-bug-fill"></span><span class="bi bi-play"> Run </span>
+            <span class="bi bi-cloud-upload"> Submit </span>&nbsp;<span class="bi bi-file"></span>
+        </div>
+        <div>
+            <span class="bi bi-ui-checks-grid"></span>
+            <span class="bi bi-gear"></span>
+            <span class="btn-register"> Register </span>
+            <span>or</span>
+            <span class="btn-sign-in">Sign in</span>
+            <span class="btn-premium"> Premium </span>
+        </div>
+    </header>
+    <section>
+        <div class="panel-left">
+            <div class="left-header">
+                <div>
+                    <span class="bi bi-file-earmark-medical-fill"> <samp><b>Description</b> | </samp></span>
+                    <span class="bi bi-book"> <samp>Editorial | </samp></span>
+                    <span class="bi bi-funnel"> <samp>Solutions | </samp></span>
+                    <span class="bi bi-clock-history"> <samp>Submissions</samp></span>
                 </div>
-                <div class="description">
-                    <big><b>2667. Create Hello World Function</b></big>
-                    <br><br>
-                    <div>
-                        <span class="easy">Easy</span>
-                        <span class="bi bi-lock-fill"> Companies</span>
-                    </div>
-                    <br>
-                    <div class="summary">
-                        <samp>
-                            Write a function <samp class="summary-samp">createHelloWorld.</samp> It should return a new
-                            function that always returns <samp class="summary-samp">"Hello World".</samp>
-                        </samp>
-                    </div>
-                    <br><br><br>
-                    <big><b>Example 1:</b></big>
-                    <pre>
-    <code>
-    <big><b>Input:</b></big> args = []
-    <big><b>Output:</b></big> "Hello World"
-    <big><b>Explanation:</b></big>
-    const f = createHelloWorld();
-    f(); // "Hello World"
-        
-    The function returned by createHelloWorld should always return 
-    "Hello World".
-    </code>
-                    </pre>
-                    <br>
-                    <big><b>Example 2:</b></big>
-                    <pre>
-    <code>
-    <big><b>Input:</b></big> args = [{},null,42]
-    <big><b>Output:</b></big> "Hello World"
-    <big><b>Explanation:</b></big>
-    const f = createHelloWorld();
-    f({}, null, 42); // "Hello World"
-        
-    Any arguments could be passed to the function but it
-    should still always return "Hello World".
-    </code>
-                    </pre>
+                <div>
+                    <span class="bi bi-box"></span>
+                    <span class="bi bi-chevron-left"></span>
                 </div>
             </div>
-            <div class="panel-right">
-                <div class="right-header">
-                    <div>
-                        <span class="bi bi-code"> <samp><b><big>Code</big></b></samp></span>
-                    </div>
-                    <div>
-                        <span class="bi bi-box"></span>&nbsp;
-                        <span class="bi bi-chevron-up"></span>
-                    </div>
+            <div class="description">
+                <big><b>2667. Create Hello World Function</b></big>
+                <br><br>
+                <div>
+                    <span class="easy">Easy</span>
+                    <span class="bi bi-lock-fill"> Companies</span>
                 </div>
-                <div class="right-sub-header">
-                    <div>
-                        <span>JavaScript <span class="bi bi-chevron-down"></span></span>
-                        <span class="bi bi-dot">Auto</span>
-                    </div>
-                    <div class="sub-header-icons">
-                        <span class="bi bi-bookmark"></span>
-                        <span class="bi bi-braces"></span>
-                        <span class="bi bi-arrow-counterclockwise"></span>
-                        <span class="bi bi-arrows-angle-expand"></span>
-                    </div>
+                <br>
+                <div class="summary">
+                    <samp>
+                        Write a function <samp class="summary-samp">createHelloWorld.</samp> It should return a new
+                        function that always returns <samp class="summary-samp">"Hello World".</samp>
+                    </samp>
                 </div>
-                <div class="right-panel-description">
-                    <pre>
-    <code class="right-panel-code">
-        <samp>/**</samp>
-         <samp>*</samp> <var>@return</var> <span class="function-first-line">{Function}</span>
-         <samp>*/</samp>
-        <var>var</var> <span class="var-ref-name">createHelloWorld</span> = <var>function</var>() {
+                <br><br><br>
+                <big><b>Example 1:</b></big>
+                <pre>
+<code>
+<big><b>Input:</b></big> args = []
+<big><b>Output:</b></big> "Hello World"
+<big><b>Explanation:</b></big>
+const f = createHelloWorld();
+f(); // "Hello World"
     
-            <span class="return">return</span> <var>function</var>(<span class="args">...args</span>) {
+The function returned by createHelloWorld should always return 
+"Hello World".
+</code>
+                </pre>
+                <br>
+                <big><b>Example 2:</b></big>
+                <pre>
+<code>
+<big><b>Input:</b></big> args = [{},null,42]
+<big><b>Output:</b></big> "Hello World"
+<big><b>Explanation:</b></big>
+const f = createHelloWorld();
+f({}, null, 42); // "Hello World"
     
-            }
-        };
-    
-        <samp>
-        /**
-         * const f = createHelloWorld();
-         * f(); // "Hello World"
-         */
-        </samp>
-    </code>
-    </pre>
+Any arguments could be passed to the function but it
+should still always return "Hello World".
+</code>
+                </pre>
+            </div>
+        </div>
+        <div class="panel-right">
+            <div class="right-header">
+                <div>
+                    <span class="bi bi-code"> <samp><b><big>Code</big></b></samp></span>
+                </div>
+                <div>
+                    <span class="bi bi-box"></span>&nbsp;
+                    <span class="bi bi-chevron-up"></span>
                 </div>
             </div>
-        </section>
-    </main>
+            <div class="right-sub-header">
+                <div>
+                    <span>JavaScript <span class="bi bi-chevron-down"></span></span>
+                    <span class="bi bi-dot">Auto</span>
+                </div>
+                <div class="sub-header-icons">
+                    <span class="bi bi-bookmark"></span>
+                    <span class="bi bi-braces"></span>
+                    <span class="bi bi-arrow-counterclockwise"></span>
+                    <span class="bi bi-arrows-angle-expand"></span>
+                </div>
+            </div>
+            <div class="right-panel-description">
+                <pre>
+<code class="right-panel-code">
+    <samp>/**</samp>
+     <samp>*</samp> <var>@return</var> <span class="function-first-line">{Function}</span>
+     <samp>*/</samp>
+    <var>var</var> <span class="var-ref-name">createHelloWorld</span> = <var>function</var>() {
+
+        <span class="return">return</span> <var>function</var>(<span class="args">...args</span>) {
+
+        }
+    };
+
+    <samp>
+    /**
+     * const f = createHelloWorld();
+     * f(); // "Hello World"
+     */
+    </samp>
+</code>
+</pre>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>
