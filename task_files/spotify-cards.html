@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <title>Spotify Cards</title>
+    <style>
+        section {
+            font-family: Arial;
+        }
+
+        nav {
+            background-color: #212121;
+            color: white;
+            padding: 16px 30px 40px 30px;
+            border-radius: 10px;
+        }
+
+        img {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 100%;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .artist-name {
+            font-weight: bold;
+            font-size: 18px;
+            color: white;
+        }
+
+        .artist {
+            color: gray;
+            font-size: 14px;
+        }
+
+        .card-list {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        main {
+            margin: 4px;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            background-color: #212121;
+        }
+
+        .playlist-card {
+            box-shadow: 2px 2px 2px black;
+            padding: 14px;
+            border-radius: 4px;
+            width: 180px;
+            border: 1px solid #ffffff15;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        .btn-play {
+            background-color: black;
+            color: white;
+            padding: 8px;
+            text-align: center;
+            border-radius: 20px;
+        }
+
+        .playlist-card:target {
+            box-shadow: 3px 4px 10px green;
+            border: 1px solid yellow;
+            border-radius: 10px;
+            background-color: rgba(107, 235, 139, 0.048);
+            color: white;
+            transition: 1s;
+        }
+    </style>
+    <script>
+        // Simulate clicking the link for Pritam on page load
+        window.onload = function () {
+            if (!window.location.hash) {
+                document.querySelector('a[href="#pritam"]').click();
+            }
+        };
+    </script>
+</head>
+<body>
+    <section>
+        <nav>
+            <h2>Popular artists</h2>
+            <div class="card-list">
+                <div class="card">
+                    <a href="#pritam">
+                        <img src="../images/Pritam.jpeg">
+                        <div class="artist-name">Pritam</div>
+                        <div class="artist">Artist</div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="#sachin">
+                        <img src="../images/Sachin-Jigar.jpeg">
+                        <div class="artist-name">Sachin-Jigar</div>
+                        <div class="artist">Artist</div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="#rahman">
+                        <img src="../images/Rehman.jpeg">
+                        <div class="artist-name">A.R Rahman</div>
+                        <div class="artist">Artist</div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="#arjit">
+                        <img src="../images/Arijit.jpeg">
+                        <div class="artist-name">Arjit Singh</div>
+                        <div class="artist">Artist</div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="#anirudh">
+                        <img src="../images/Anirudh.jpeg">
+                        <div class="artist-name">Anirudh</div>
+                        <div class="artist">Artist</div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="#atif">
+                        <img src="../images/Atif.jpeg">
+                        <div class="artist-name">Atif Aslam</div>
+                        <div class="artist">Artist</div>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <main>
+            <div id="pritam" class="playlist-card">
+                <h3 align="center">Pritam Playlist</h3>
+                <ul>
+                    <li class="bi bi-play">Song-1</li>
+                    <li class="bi bi-play">Song-2</li>
+                    <li class="bi bi-play">Song-3</li>
+                </ul>
+                <div class="btn-play"><span class="bi bi-play-circle"></span> Play All</div>
+            </div>
+            <div id="sachin" class="playlist-card">
+                <h3 align="center">Sachin Playlist</h3>
+                <ul>
+                    <li class="bi bi-play">Song-1</li>
+                    <li class="bi bi-play">Song-2</li>
+                    <li class="bi bi-play">Song-3</li>
+                </ul>
+                <div class="btn-play"><span class="bi bi-play-circle"></span> Play All</div>
+            </div>
+            <div id="rahman" class="playlist-card">
+                <h3 align="center">Rahman Playlist</h3>
+                <ul>
+                    <li class="bi bi-play">Song-1</li>
+                    <li class="bi bi-play">Song-2</li>
+                    <li class="bi bi-play">Song-3</li>
+                </ul>
+                <div class="btn-play"><span class="bi bi-play-circle"></span> Play All</div>
+            </div>
+            <div id="arjit" class="playlist-card">
+                <h3 align="center">Arjit Playlist</h3>
+                <ul>
+                    <li class="bi bi-play">Song-1</li>
+                    <li class="bi bi-play">Song-2</li>
+                    <li class="bi bi-play">Song-3</li>
+                </ul>
+                <div class="btn-play"><span class="bi bi-play-circle"></span> Play All</div>
+            </div>
+            <div id="anirudh" class="playlist-card">
+                <h3 align="center">Anirudh Playlist</h3>
+                <ul>
+                    <li class="bi bi-play">Song-1</li>
+                    <li class="bi bi-play">Song-2</li>
+                    <li class="bi bi-play">Song-3</li>
+                </ul>
+                <div class="btn-play"><span class="bi bi-play-circle"></span> Play All</div>
+            </div>
+            <div id="atif" class="playlist-card">
+                <h3 align="center">Atif Playlist</h3>
+                <ul>
+                    <li class="bi bi-play">Song-1</li>
+                    <li class="bi bi-play">Song-2</li>
+                    <li class="bi bi-play">Song-3</li>
+                </ul>
+                <div class="btn-play"><span class="bi bi-play-circle"></span> Play All</div>
+            </div>
+        </main>
+    </section>
+</body>
+</html>
