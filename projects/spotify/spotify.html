@@ -121,23 +121,11 @@
         }
 
         main {
-            height: 430px;
+            height: 426px;
             overflow: auto;
             background-color: #121212;
             border-radius: 10px;
             padding: 14px;
-        }
-
-
-        footer {
-            padding: 4px;
-        }
-
-        .footer-container {
-            display: flex;
-            justify-content: space-between;
-            background-color: pink;
-            padding: 10px;
         }
 
         .library-header {
@@ -266,6 +254,77 @@
             font-size: 13px;
             margin-top: 6px;
             color: #A7A7A7;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul li:first-child {
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            margin-left: -24px;
+            font-size: 16px;
+        }
+
+        .main-footer {
+            display: grid;
+            grid-template-columns: 2.4fr 2.4fr 2.4fr 2.4fr 2.4fr;
+            margin-top:80px;
+        }
+        .main-footer-icons{
+            padding: 10px;
+            margin-left: 20px;
+            margin-top: 14px;
+        }
+        .main-footer-icons span{
+            background-color: #292929;
+            border-radius: 100%;
+            padding: 8px;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        .copyright{
+            margin-top: 30px;
+            border-top: 1px solid rgba(128, 128, 128, 0.336);
+            padding: 40px 10px 60px 10px;
+        }
+        .copyright span{
+            font-weight: bold;
+        }
+
+        
+        footer {
+            padding: 4px;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            background: linear-gradient(20deg, #AD2A98, #6D79D9);
+            padding: 10px;
+        }
+        small{
+            font-weight: bold;
+            font-size: 15px;
+        }
+        .footer-summary{
+            margin-top: 4px;
+        }
+        .footer-btn{
+            margin: auto 0px auto 0px;
+        }
+        .footer-btn-signup{
+            background-color: white;
+            font-weight: bold;
+            color: black;
+            padding: 12px 30px 12px 30px;
+            border-radius: 50px;
         }
     </style>
 </head>
@@ -411,21 +470,169 @@
                 </div>
             </div>
 
+            <div class="main-sub-container">
+                <div class="main-title">
+                    <div>Popular Radio</div>
+                    <div>Show all</div>
+                </div>
+                <div class="sub-artist-container">
+                    <div class="popular-album">
+                        <img src="../../images/popular_radio_1.jpeg" width="135" height="135">
+                        <span>
+                            With Atif Aslam,
+                            Mithoon, Pritamm..
+                        </span>
+                    </div>
+                    <div class="popular-album">
+                        <img src="../../images/popular_radio_2.jpeg" width="135" height="135">
+                        <span>
+                            With Mohammed
+                            Rafi, Mukesh, Ash...
+                        </span>
+                    </div>
+                    <div class="popular-album">
+                        <img src="../../images/popular_radio_3.jpeg" width="135" height="135">
+                        <span>
+                            With Karan Aujla,
+                            Shubh, AP Dhillon...
+                        </span>
+                    </div>
+                    <div class="popular-album">
+                        <img src="../../images/popular_radio_4.jpeg" width="135" height="135">
+                        <span>
+                            With Pritam, Mohit
+                            Chauhan, Atif Asla...
+                        </span>
+                    </div>
+                    <div class="popular-album">
+                        <img src="../../images/popular_radio_5.jpeg" width="135" height="135">
+                        <span>
+                            With Harris Jayaraj,
+                            G.V.Prakash,...
+                        </span>
+                    </div>
+                    <div class="popular-album">
+                        <img src="../../images/popular_radio_6.jpeg" width="135" height="135">
+                        <span>
+                            With Swarnalatha,
+                            AR.Rahman, Dev...
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-sub-container">
+                <div class="main-title">
+                    <div>Playlist from our Editors</div>
+                    <div>Show all</div>
+                </div>
+                <div class="sub-artist-container">
+                    <div class="popular-album">
+                        <img src="../../images/editor_playlist_1.jpeg" width="135" height="135">
+                        <span>
+                            Kick back to the
+                            best new and...
+                        </span>
+                    </div>
+                    <div class="popular-album">
+                        <img src="../../images/editor_playlist_2.jpeg" width="135" height="135">
+                        <span>
+                            Soft instrumental
+                            Jazz for all your...
+                        </span>
+                    </div>
+                    <div class="popular-album">
+                        <img src="../../images/editor_playlist_3.jpeg" width="135" height="135">
+                        <span>
+                            Calm your mind
+                            from anxiety with...
+                        </span>
+                    </div>
+                    <div class="popular-album">
+                        <img src="../../images/editor_playlist_4.jpeg" width="135" height="135">
+                        <span>
+                            The biggest songs
+                            of the 2020s...
+                        </span>
+                    </div>
+                    <div class="popular-album">
+                        <img src="../../images/editor_playlist_5.jpeg" width="135" height="135">
+                        <span>
+                            chill beats, lofi
+                            vibes, new tracks...
+                        </span>
+                    </div>
+                    <div class="popular-album">
+                        <img src="../../images/editor_playlist_6.jpeg" width="135" height="135">
+                        <span>
+                            Where R&B lives.
+                            Cover:Summer...
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-footer">
+                <div>
+                    <ul>
+                        <li>Company</li>
+                        <li>About</li>
+                        <li>Jobs</li>
+                        <li>For the Record</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li>Communities</li>
+                        <li>For Artists</li>
+                        <li>Developers</li>
+                        <li>Advertising</li>
+                        <li>Investors</li>
+                        <li>Vendors</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li>Useful links</li>
+                        <li>Support</li>
+                        <li>Free Mobile App</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li>Spotify Plans</li>
+                        <li>Premium Individual</li>
+                        <li>Premium Duo</li>
+                        <li>Premium Family</li>
+                        <li>Premium Student</li>
+                        <li>Spotify Free</li>
+                    </ul>
+                </div>
+                <div class="main-footer-icons">
+                    <span class="bi bi-instagram"></span>
+                    <span class="bi bi-twitter"></span>
+                    <span class="bi bi-facebook"></span>
+                </div>
+            </div>
+            <div class="copyright">
+                <span>© 2024 Spotify AB</span>
+            </div>
         </main>
     </section>
     <footer>
         <div class="footer-container">
             <div>
-                <div>Preview of Spotify</div>
-                <div>
+                <div><small>Preview of Spotify</small></div>
+                <div class="footer-summary">
                     Sign up to get unlimited songs and podcasts with occasional ads. No credit card needed.
                 </div>
             </div>
-            <div>
-                <span>Sign up free</span>
+            <div class="footer-btn">
+                <span class="footer-btn-signup">Sign up free</span>
             </div>
         </div>
     </footer>
+    
 </body>
 
 </html>
