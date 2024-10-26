@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Spotify</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial;
+        }
+
+        header {
+            display: grid;
+            grid-template-columns: 2fr 8fr 2fr;
+            align-items: center;
+            padding-top: 2px;
+            padding-left: 20px;
+            padding-right: 10px;
+        }
+
+        .bi-spotify {
+            font-size: 30px;
+
+        }
+
+        .spotify-icon-home {
+            background-color: #1F1F1F;
+            width: 36px;
+            height: 36px;
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 4px;
+        }
+
+        .bi-house {
+            font-size: 22px;
+        }
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .search-bar {
+            background-color: #1F1F1F;
+            padding: 10px 20px 10px 20px;
+            width: 460px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 20px;
+            border-radius: 50px;
+            color: #A7A7A7;
+        }
+
+        .search-bar img {
+            width: 28px;
+        }
+
+        .browse-icon {
+            display: flex;
+            gap: 10px;
+        }
+
+        .search-title {
+            font-weight: 600;
+            font-size: 16px;
+            margin-left: 8px;
+        }
+
+        .btn-signup {
+            font-weight: bold;
+            color: #A7A7A7;
+        }
+
+        .btn-container-header {
+            display: flex;
+            justify-content: end;
+            font-size: 16.5px;
+        }
+
+        .header-btn-section {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .btn-login {
+            /* padding: 16px 24px 16px 24px; */
+            width: 120px;
+            text-align: center;
+            padding: 14px 0px 14px 0px;
+            background-color: white;
+            color: black;
+            border-radius: 50px;
+            font-weight: bold;
+        }
+
+
+
+        section {
+            margin-top: 10px;
+            padding: 4px;
+            display: grid;
+            grid-template-columns: 3.5fr 8.5fr;
+            grid-gap: 10px;
+        }
+
+        nav {
+            background-color: #121212;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        main {
+            height: 430px;
+            overflow: auto;
+            background-color: #121212;
+            border-radius: 10px;
+            padding: 14px;
+        }
+
+
+        footer {
+            padding: 4px;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            background-color: pink;
+            padding: 10px;
+        }
+
+        .library-header {
+            padding: 16px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 24px;
+            color: #A7A7A7;
+            margin-bottom: 20px;
+        }
+
+        .library-title {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .lib-playlist-contianer {
+            background-color: #1F1F1F;
+            padding: 24px 16px 24px 16px;
+            border-radius: 10px;
+        }
+
+        .create-title {
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .lib-playlist-contianer p {
+            font-size: 14px;
+        }
+
+        .btn-create-palylist {
+            background-color: white;
+            width: fit-content;
+            color: black;
+            padding: 8px 18px 8px 18px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .playlist-list-item {
+            font-size: 11.5px;
+            display: flex;
+            gap: 18px;
+            margin-bottom: 10px;
+            color: #A7A7A7;
+
+        }
+
+        .playlist-item-container {
+            margin: 40px 14px 14px 14px;
+        }
+
+        .playlist-item-container p {
+            font-size: 12.5px;
+        }
+
+        .bi-globe {
+            border: 1px solid #A7A7A7;
+            padding: 10px 18px 10px 18px;
+            border-radius: 50px;
+            font-size: 13.5px;
+            font-weight: bold;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+
+
+        .main-title {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+        }
+
+        .main-title div:first-child {
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        .main-title div:last-child {
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .sub-artist-container {
+            display: grid;
+            grid-template-columns: 2fr 2fr 2fr 2fr 2fr 2fr;
+            grid-gap: 16px;
+        }
+
+        .popular-artist img {
+            border-radius: 100%;
+            object-fit: cover;
+        }
+
+        .popular-artist div {
+            font-size: 14.5px;
+            font-weight: 600;
+        }
+
+        .popular-artist span {
+            display: inline-block;
+            font-size: 13px;
+            margin-top: 8px;
+            color: #A7A7A7;
+        }
+
+        .main-sub-container {
+            margin-bottom: 30px;
+        }
+
+        .popular-album img {
+            object-fit: cover;
+        }
+
+        .popular-album div {
+            margin-top: 10px;
+            font-size: 14.5px;
+            font-weight: 600;
+        }
+
+        .popular-album span {
+            display: inline-block;
+            font-size: 13px;
+            margin-top: 6px;
+            color: #A7A7A7;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <span class="bi bi-spotify"></span>
+        </div>
+        <div>
+            <div class="search-container">
+                <div class="spotify-icon-home">
+                    <span class="bi bi-house"></span>
+                </div>
+                <div class="search-bar">
+                    <span class="bi bi-search"> <span class="search-title">What do you want to play?</span></span>
+                    <span class="browse-icon">| <img src="./browser_icon.png"></span>
+                </div>
+            </div>
+        </div>
+        <div class="btn-container-header">
+            <div class="header-btn-section">
+                <span class="btn-signup">Sign up</span>
+                <span class="btn-login">Log in</span>
+            </div>
+        </div>
+    </header>
+    <section>
+        <nav>
+            <div class="library-header">
+                <span class="bi bi-music-note-list">&nbsp;<span class="library-title">Your Library</span></span>
+                <span class="bi bi-plus"></span>
+            </div>
+            <div class="lib-playlist-main">
+                <div class="lib-playlist-contianer">
+                    <div class="create-title">Create your first playlist</div>
+                    <p>It's easy, we'll help you</p>
+                    <div class="btn-create-palylist">Create playlist</div>
+                </div>
+            </div>
+            <div class="playlist-item-container">
+                <div class="playlist-list-item">
+                    <div>Legal</div>
+                    <div>Safety & Privacy Center </div>
+                    <div>Privacy Policy </div>
+                </div>
+                <div class="playlist-list-item">
+                    <div>Cookies </div>
+                    <div>AboutAds </div>
+                    <div>Accessibility</div>
+                </div>
+                <p>Cookies</p>
+                <span class="bi bi-globe"> English</span>
+            </div>
+        </nav>
+        <main>
+            <div class="main-sub-container">
+                <div class="main-title">
+                    <div>Popular artists</div>
+                    <div>Show all</div>
+                </div>
+                <div class="sub-artist-container">
+                    <div class="popular-artist">
+                        <img src="../../images/Pritam.jpeg" width="135" height="135">
+                        <div>Pritam</div>
+                        <span>Artist</span>
+                    </div>
+                    <div class="popular-artist">
+                        <img src="../../images/Rehman.jpeg" width="135" height="135">
+                        <div>A.R. Rahman</div>
+                        <span>Artist</span>
+                    </div>
+                    <div class="popular-artist">
+                        <img src="../../images/Sachin-Jigar.jpeg" width="135" height="135">
+                        <div>Sachin-Jigar</div>
+                        <span>Artist</span>
+                    </div>
+                    <div class="popular-artist">
+                        <img src="../../images/Arijit.jpeg" width="135" height="135">
+                        <div>Arijit Singh</div>
+                        <span>Artist</span>
+                    </div>
+                    <div class="popular-artist">
+                        <img src="../../images/Anirudh.jpeg" width="135" height="135">
+                        <div>Anirudh Ravichandar</div>
+                        <span>Artist</span>
+                    </div>
+                    <div class="popular-artist">
+                        <img src="../../images/Atif.jpeg" width="135" height="135">
+                        <div>Atif Aslam</div>
+                        <span>Artist</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-sub-container">
+                <div class="main-title">
+                    <div>Popular albums</div>
+                    <div>Show all</div>
+                </div>
+                <div class="sub-artist-container">
+                    <div class="popular-album">
+                        <img src="../../images/popular_img_1.jpeg" width="135" height="135">
+                        <div>GLORY</div>
+                        <span>Yo Yo Honey Singh</span>
+                    </div>
+                    <div class="popular-album">
+                        <img src="../../images/popular_img_2.jpeg" width="135" height="135">
+                        <div>Aashiqui 2</div>
+                        <span>
+                            Mithoon, Ankit Tiwari,
+                            Jeet Gannguli
+                        </span>
+                    </div>
+                    <div class="popular-album">
+                        <img src="../../images/popular_img_3.jpeg" width="135" height="135">
+                        <div>Jo Tum Mere Ho</div>
+                        <span>
+                            Anuv Jain
+                        </span>
+                    </div>
+                    <div class="popular-album">
+                        <img src="../../images/popular_img_4.jpeg" width="135" height="135">
+                        <div>Making Memories</div>
+                        <span>
+                            Karan Aujla, Ikky
+                        </span>
+                    </div>
+                    <div class="popular-album">
+                        <img src="../../images/popular_img_5.jpeg" width="135" height="135">
+                        <div>Yeh Jawaani Hai Deewani</div>
+                        <span>
+                            Pritam
+                        </span>
+                    </div>
+                    <div class="popular-album">
+                        <img src="../../images/popular_img_6.jpeg" width="135" height="135">
+                        <div>Aaj Ki Raat (From "Stree 2")</div>
+                        <span>
+                            Sachin-Jigar, Amitabh...
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <div>
+                <div>Preview of Spotify</div>
+                <div>
+                    Sign up to get unlimited songs and podcasts with occasional ads. No credit card needed.
+                </div>
+            </div>
+            <div>
+                <span>Sign up free</span>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
