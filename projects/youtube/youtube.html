@@ -1,11 +1,480 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="shortcut icon" href="../../images/youtube_fav.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>You Tube</title>
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            font-size: 16px;
+            font-family: Arial;
+        }
+
+        .bi-justify {
+            font-size: 24px;
+        }
+
+        .youtube-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header-row-1 {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .search-bar {
+            border: 1px solid gray;
+            padding: 10px 20px 10px 20px;
+            width: 500px;
+            display: inline-block;
+            border-radius: 20px;
+        }
+
+        .search-bar .bi-search {
+            float: right;
+        }
+
+        .bi-mic-fill {
+            background-color: #2727274f;
+            color: black;
+            padding: 10px;
+            border-radius: 50px;
+            margin-left: 10px;
+        }
+
+        .header-row-3 {
+            display: flex;
+            align-items: center;
+        }
+
+        .bi-three-dots-vertical {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+
+        .btn-sign-in .bi-person-circle {
+            border: 1px solid gray;
+            color: #1288dd;
+            font-weight: bold;
+            padding: 10px 18px 10px 18px;
+            border-radius: 50px;
+        }
+
+        section {
+            display: grid;
+            grid-template-columns: 2.5fr 9.5fr;
+            grid-gap: 20px;
+            margin-top: 20px;
+        }
+
+        .nav-main-item {
+            border-bottom: 1px solid gray;
+            margin-bottom: 16px;
+            margin-top: 10px;
+            padding-bottom: 16px;
+        }
+
+        main {
+            height: 500px;
+            overflow: auto;
+        }
+        nav{
+            height: 500px;
+            overflow: auto;
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 16px;
+            margin-left: 10px;
+        }
+
+        .nav-sign-text {
+            margin-left: 10px;
+        }
+
+        .nav-sign-in-btn {
+            margin-top: 10px;
+            border: 1px solid gray;
+            color: #1288dd;
+            font-weight: bold;
+            padding: 10px;
+            width: fit-content;
+            border-radius: 50px;
+        }
+
+        .main-banner img {
+            object-fit: contain;
+            border-radius: 20px;
+        }
+
+        article {
+            display: grid;
+            grid-template-columns: 2fr 10fr;
+            margin-top: 20px;
+            grid-gap: 16px;
+        }
+
+        article img {
+            box-shadow: 1px 1px 6px rgba(128, 128, 128, 0.199);
+            border-radius: 100%;
+        }
+
+        .article-title {
+            font-weight: bold;
+            font-size: 36px;
+            margin-bottom: 4px;
+        }
+
+        .article-subtitle {
+            margin-bottom: 10px;
+        }
+
+        .summary {
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .article-instagram {
+            font-weight: 600;
+            margin-top: 10px;
+            margin-bottom: 8px;
+        }
+
+        .article-subscribe {
+            background: white;
+            border: 1px solid gray;
+            width: fit-content;
+            padding: 10px;
+            color: black;
+            border-radius: 50px;
+            padding: 10px 16px 10px 16px;
+            margin-top: 18px;
+            font-weight: bold;
+        }
+
+        .channel-menu {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-top: 20px;
+            margin-left: 10px;
+            font-weight: 600;
+            border-bottom: 1px solid rgba(128, 128, 128, 0.541);
+            padding-bottom: 10px;
+            font-size: 15px;
+        }
+
+        .channel-menu span:first-child {
+            text-decoration: underline;
+            font-size: 17px;
+        }
+
+        .channel-menu span:last-child {
+            font-size: 20px;
+        }
+
+        .explore-title{
+            margin-left: 10px;
+        }
+        .promotion {
+            display: grid;
+            grid-template-columns: 4fr 8fr;
+            grid-gap: 20px;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        .promotion-title {
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .promotion-sub-title {
+            color: rgba(0, 0, 0, 0.705);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .promotion-new-batches {
+            margin-bottom: 14px;
+        }
+
+        .read-more {
+            color: rgba(0, 0, 0, 0.705);
+            font-weight: 600;
+            font-size: 14px;
+            margin-top: 2px;
+        }
+        .videos{
+            margin-top: 20px;
+            border-top: 1px solid rgba(0, 0, 0, 0.452);
+            padding-top: 26px;
+            padding-bottom: 10px;
+            /* margin-bottom: 30px; */
+        }
+        .playlist{
+            display: grid;
+            grid-template-columns: 2.4fr 2.4fr 2.4fr 2.4fr 2.4fr;
+            margin-bottom: 30px;
+            grid-gap: 10px;
+
+        }
+        .playlist iframe {
+            width: 180px;
+            margin-right: 5px;
+        }
+        .i-frame-title{
+            font-weight: bold;
+            width: 190px;
+            font-size: 14px;
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
+        .i-frame-views{
+            font-size: 13px;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <header>
+        <div class="header-row-1">
+            <div>
+                <span class="bi bi-justify"></span>
+            </div>
+            <div class="youtube-logo">
+                <img src="../../images/youtube_header_logo.png" width="100" alt="">
+            </div>
+        </div>
+        <div>
+            <span class="search-bar">
+                <span class="">Search</span>
+                <span class="bi bi-search"></span>
+            </span>
+            <span class="bi bi-mic-fill"></span>
+        </div>
+        <div class="header-row-3">
+            <span class="bi bi-three-dots-vertical"></span>
+            <div class="btn-sign-in">
+                <span class="bi bi-person-circle"> Sign in</span>
+            </div>
+        </div>
+    </header>
+    <section>
+        <nav>
+            <div class="nav-main-item">
+                <div class="nav-item">
+                    <img src="../../images/youtube_home.png" width="20">
+                    <span>Home</span>
+                </div>
+                <div class="nav-item">
+                    <img src="../../images/youtube_shorts.jpg" width="20">
+                    <span>Shorts</span>
+                </div>
+                <div class="nav-item">
+                    <img src="../../images/youtube_subscriptions.png" width="20">
+                    <span>Subscriptions</span>
+                </div>
+            </div>
+            <div class="nav-main-item">
+                <div class="nav-item">
+                    <img src="../../images/youtube_you.png" width="20">
+                    <span>You</span>
+                </div>
+                <div class="nav-item">
+                    <img src="../../images/youtube_history.png" width="20">
+                    <span>History</span>
+                </div>
+            </div>
+            <div class="nav-main-item">
+                <div class="nav-sign-text">
+                    Sign in to like videos,<br> comment, and subscribe.
+                    <div class="nav-sign-in-btn">
+                        <span class="bi bi-person-circle"> Sign in</span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h4 class="explore-title">Explore</h4>
+                <div class="nav-main-item">
+                    <div class="nav-item">
+                        <img src="../../images/youtube_trending.png" width="20">
+                        <span>Trending</span>
+                    </div>
+                    <div class="nav-item">
+                        <img src="../../images/youtube_shopping.png" width="20">
+                        <span>Shopping</span>
+                    </div>
+                    <div class="nav-item">
+                        <img src="../../images/youtube_music.png" width="20">
+                        <span>Musics</span>
+                    </div>
+                    <div class="nav-item">
+                        <img src="../../images/youtube_movies.png" width="20">
+                        <span>Movie</span>
+                    </div>
+                    <div class="nav-item">
+                        <img src="../../images/youtube_live.png" width="20">
+                        <span>Live</span>
+                    </div>
+                    <div class="nav-item">
+                        <img src="../../images/youtueb_gaming.png" width="20">
+                        <span>Gaming</span>
+                    </div>
+                    <div class="nav-item">
+                        <img src="../../images/youtube_news.png" width="20">
+                        <span>News</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <main>
+            <div class="main-banner">
+                <img src="../../images/youtube_nit_banner.jpg" width="96%">
+            </div>
+            <article>
+                <div>
+                    <img src="../../images/nit_logo.jpg" width="96%">
+                </div>
+                <div>
+                    <div class="article-title">Naresh i Technologies</div>
+                    <div class="article-subtitle">@NareshIT • 1.3M subscribers • 3.2K videos</div>
+                    <div class="summary">
+                        We are one of the software training organization With a library of 200+ courses, we have...
+                    </div>
+                    <div class="article-instagram">
+                        <a href="https://www.instagram.com/nareshitech">instagram.com/nareshitech</a> and 7 more links
+                    </div>
+                    <div class="article-subscribe">
+                        Subscribe
+                    </div>
+                </div>
+            </article>
+            <div class="channel-menu-container">
+                <div class="channel-menu">
+                    <span>Home</span>
+                    <span>Videos</span>
+                    <span>Shorts</span>
+                    <span>Live</span>
+                    <span>Playlists</span>
+                    <span>Community</span>
+                    <span class="bi bi-search"></span>
+                </div>
+            </div>
+
+            <div class="promotion">
+                <div>
+                    <iframe class="promotion-video" src="https://www.youtube.com/embed/yBw-6rr5hbA" width="100%"
+                        height="100%"></iframe>
+                </div>
+                <div>
+                    <div class="promotion-title">
+                        Best Software Training Institute with Placements - Naresh i Technologi...
+                    </div>
+                    <div class="promotion-sub-title">
+                        231,578 views 4 years ago
+                    </div>
+                    <div class="promotion-new-batches">
+                        Register For Free Demos On New Batches :-
+                    </div>
+                    <div>
+                        Free Weekend Workshop on Azure AI Certification Training | @<br>
+                        5:30 PM :- <a href="https://shorturl.at/9gcXZ">https://shorturl.at/9gcXZ</a>
+                    </div>
+                    <div>
+                        Free Weekend Workshop on Azure AI Certification Training | @<br>
+                        5:30 PM :- <a href="https://shorturl.at/9gcXZ">https://shorturl.at/9gcXZ</a>
+                    </div>
+                    <div>
+                        <span>...</span>
+                        <div class="read-more">READ MORE</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="videos">
+                <h2>Videos</h2>
+                <div class="playlist">
+                    <div>
+                        <iframe src="https://www.youtube.com/embed/pPHCIekf9uA"></iframe>
+                        <div class="i-frame-title">Why to Fu" Stack Data science & GEN A1 in 2025...</div>
+                        <div class="i-frame-views">770 views • 1 day ago</div>
+                    </div>
+                    <div>
+                        <iframe src="https://www.youtube.com/embed/2Db8B9IUrcA" width="100%"></iframe>
+                        <div class="i-frame-title">How to Reverse a Word in Python Using an...</div>
+                        <div class="i-frame-views">720 views • 2 day ago</div>
+                    </div>
+                    <div>
+                        <iframe src="https://www.youtube.com/embed/DdVD8u1w8gU"></iframe>
+                        <div class="i-frame-title">How to Create an Anonymous Function for Addition...</div>
+                        <div class="i-frame-views">788 views • 1 day ago</div>
+                    </div>
+                    <div>
+                        <iframe src="https://www.youtube.com/embed/m_Tlep1SNgI"></iframe>
+                        <div class="i-frame-title">Session-4 | Data Analytics and Business...</div>
+                        <div class="i-frame-views">870 views • 2 day ago</div>
+                    </div>
+                    <div>
+                        <iframe src="https://www.youtube.com/embed/wiCfYl3hB_Q"></iframe>
+                        <div class="i-frame-title">Why Use Anonymous Functions-Understanding...</div>
+                        <div class="i-frame-views">970 views • 2 day ago</div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="videos">
+                <h2>Past live streams</h2>
+                <div class="playlist">
+                    <div>
+                        <iframe src="https://www.youtube.com/embed/xOIGu83VS4g"></iframe>
+                        <div class="i-frame-title">Developing a Smart User Chatbot Using GenAI Gemini...</div>
+                        <div class="i-frame-views">970 views • 5 day ago</div>
+                    </div>
+                    <div>
+                        <iframe src="https://www.youtube.com/embed/baJi1276DcU" width="100%"></iframe>
+                        <div class="i-frame-title">Statistical Concept For Data Analyst & Business Analyst ...</div>
+                        <div class="i-frame-views">720 views • 2 day ago</div>
+                    </div>
+                    <div>
+                        <iframe src="https://www.youtube.com/embed/YMrTGVQDCes"></iframe>
+                        <div class="i-frame-title">Session-3 | Data Analytics and Business Analytics | Mr...</div>
+                        <div class="i-frame-views">388 views • 3 day ago</div>
+                    </div>
+                    <div>
+                        <iframe src="https://www.youtube.com/embed/3Koge8TAqrY"></iframe>
+                        <div class="i-frame-title">Session-2 | Data Analytics and Business Analytics | Mr...</div>
+                        <div class="i-frame-views">870 views • 2 day ago</div>
+                    </div>
+                    <div>
+                        <iframe src="https://www.youtube.com/embed/9ufSQpoyErY"></iframe>
+                        <div class="i-frame-title">Session-1 | Data Analytics and Business Analytics | Mr...</div>
+                        <div class="i-frame-views">970 views • 6 day ago</div>
+                        
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </section>
 </body>
+
 </html>
