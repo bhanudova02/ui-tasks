@@ -433,17 +433,94 @@
             margin-bottom: 30px;
             text-align: center;
         }
-      
-        .buy-card-section{
+
+        .buy-card-section {
             width: 80%;
             margin: auto;
             display: grid;
             grid-template-columns: 4fr 4fr 4fr;
             grid-gap: 30px;
         }
-        .buy-card{
-            border: 1px solid black;
-            padding: 20px;
+
+        .buy-card {
+            border: 1px solid rgba(128, 128, 128, 0.5);
+            padding: 24px;
+            height: fit-content;
+        }
+
+        .buy-card-header {
+            display: grid;
+            grid-template-columns: 3fr 9fr;
+            grid-gap: 20px;
+        }
+
+        .by-card-title {
+            color: gray;
+            font-weight: 500;
+            font-size: 14.5px;
+            margin-bottom: 6px;
+        }
+
+        .by-card-sub-title {
+            font-weight: bold;
+            font-size: 15px;
+            margin-bottom: 6px;
+        }
+
+        .by-card-rating {
+            color: #FF9736;
+        }
+
+        .buy-card-body {
+            color: gray;
+            line-height: 24px;
+            font-size: 15px;
+            margin-top: 12px;
+            margin-bottom: 20px;
+        }
+
+        .buy-card-footer {
+            color: gray;
+            line-height: 24px;
+            font-size: 15px;
+        }
+
+        .buy-card-dots {
+            display: flex;
+            justify-content: center;
+            gap: 4px;
+            margin-top: 50px;
+        }
+
+        .card-dots {
+            width: 8px;
+            height: 8px;
+            background-color: rgba(128, 128, 128, 0.377);
+            border-radius: 100%;
+        }
+
+        .buy-card-dots div:first-child {
+            background-color: #FF6F61;
+        }
+
+        .shopper-brands {
+            background-color: #F5F5F5;
+            padding: 10px;
+            padding: 80px 0px 80px 0px;
+        }
+
+        .shopper-brands-title{
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+        }
+        .shopper-brands-title h1{
+            margin-bottom: 14px;
+            font-size: 30px;
+        }
+        .shopper-brands-title div{
+            color: gray;
         }
     </style>
 </head>
@@ -681,12 +758,12 @@
                 <div class="buy-card">
                     <div class="buy-card-header">
                         <div>
-                            <img src="" alt="">
+                            <img src="../../images/shopper_card_1.jpg" width="100%">
                         </div>
                         <div>
-                            <div>Shoes</div>
-                            <div>Low Top Sneakers</div>
-                            <div>
+                            <div class="by-card-title">Shoes</div>
+                            <div class="by-card-sub-title">Low Top Sneakers</div>
+                            <div class="by-card-rating">
                                 <span class="bi bi-star-fill"></span>
                                 <span class="bi bi-star-fill"></span>
                                 <span class="bi bi-star-fill"></span>
@@ -709,59 +786,72 @@
                 <div class="buy-card">
                     <div class="buy-card-header">
                         <div>
-                            <img src="" alt="">
+                            <img src="../../images/shopper_card_2.jpg" width="100%">
                         </div>
                         <div>
-                            <div>Shoes</div>
-                            <div>Low Top Sneakers</div>
-                            <div>
+                            <div class="by-card-title">Dresses</div>
+                            <div class="by-card-sub-title">Cotton print Dress</div>
+                            <div class="by-card-rating">
                                 <span class="bi bi-star-fill"></span>
                                 <span class="bi bi-star-fill"></span>
                                 <span class="bi bi-star-fill"></span>
-                                <span class="bi bi-star"></span>
-                                <span class="bi bi-star"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
                             </div>
                         </div>
                     </div>
                     <div class="buy-card-body">
-                        From creepeth said moved given divide
-                        make multiply Of him shall itself also
-                        above second doesn't unto created
-                        saying land herb sea midst night
-                        wherein.
+                        God every fill great replenish darkness
+                        unto. Very open. Likeness their that
+                        light. Given under image to. Subdue Of
+                        shall cattle day fish form saw spirit and
+                        given stars, us you whales may, land,
+                        saw fill unto.
                     </div>
                     <div class="buy-card-footer">
-                        <div>Logan Edwards, 01 Jun 2019</div>
+                        <div>Jane Jefferson, 29 May 2019</div>
                     </div>
                 </div>
                 <div class="buy-card">
                     <div class="buy-card-header">
                         <div>
-                            <img src="" alt="">
+                            <img src="../../images/shopper_card_3.jpg" width="100%">
                         </div>
                         <div>
-                            <div>Shoes</div>
-                            <div>Low Top Sneakers</div>
-                            <div>
+                            <div class="by-card-title">T-shirt</div>
+                            <div class="by-card-sub-title">Oversized print T-shirt</div>
+                            <div class="by-card-rating">
                                 <span class="bi bi-star-fill"></span>
                                 <span class="bi bi-star-fill"></span>
                                 <span class="bi bi-star-fill"></span>
-                                <span class="bi bi-star"></span>
+                                <span class="bi bi-star-fill"></span>
                                 <span class="bi bi-star"></span>
                             </div>
                         </div>
                     </div>
                     <div class="buy-card-body">
-                        From creepeth said moved given divide
-                        make multiply Of him shall itself also
-                        above second doesn't unto created
-                        saying land herb sea midst night
-                        wherein.
+                        Fill his waters wherein signs likeness
+                        waters. Second light gathered appear
+                        sixth fourth, seasons behold creeping
+                        female.
                     </div>
                     <div class="buy-card-footer">
-                        <div>Logan Edwards, 01 Jun 2019</div>
+                        <div>Darrell Baker, 18 May 2019</div>
                     </div>
                 </div>
+            </div>
+            <div class="buy-card-dots">
+                <div class="card-dots"></div>
+                <div class="card-dots"></div>
+                <div class="card-dots"></div>
+                <div class="card-dots"></div>
+            </div>
+        </div>
+
+        <div class="shopper-brands">
+            <div class="shopper-brands-title">
+                <h1>@shopper</h1>
+                <div>Appear, dry there darkness they're seas, dry waters.</div>
             </div>
         </div>
 
