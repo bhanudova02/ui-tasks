@@ -7,6 +7,14 @@
     <title>Online Shopping</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            font-family: Arial;
+        }
+
         header {
             display: flex;
             flex-direction: row;
@@ -96,63 +104,318 @@
             text-align: center;
         }
 
-        .women-fashion:hover,.kids-fashion:hover,.men-fashion:hover {
+        .women-fashion:hover,
+        .kids-fashion:hover,
+        .men-fashion:hover {
             opacity: 1;
         }
-        section{
-            height: 700px;
-        }
-        footer{
+
+        footer {
             background-color: black;
             color: white;
             padding: 20px;
             font-family: Arial;
         }
-        .row-1{
+
+        .row-1 {
             text-align: center;
             margin-top: 50px;
         }
-        .footer-title{
+
+        .footer-title {
             font-size: 30px;
             margin-bottom: 40px;
         }
-        .email{
+
+        .email {
             background-color: rgba(128, 127, 127, 0.5);
             display: inline-block;
             width: 300px;
             padding: 20px;
-            text-align:left;
+            text-align: left;
         }
-        .btn-subscribe{
+
+        .btn-subscribe {
             background-color: rgb(111, 111, 111);
             display: inline-block;
             width: 120px;
             padding: 20px;
             margin-left: 20px;
         }
-        .row-2{
+
+        .row-2 {
             margin-top: 100px;
             display: grid;
             grid-template-columns: 2.4fr 2.4fr 2.4fr 2.4fr 2.4fr;
         }
-        .service-title{
+
+        .service-title {
             font-size: 20px;
             font-weight: bold;
             display: block;
             margin-bottom: 20px;
         }
-        .service-title~span{
+
+        .service-title~span {
             display: block;
             margin-bottom: 20px;
         }
-        .footer-brand-title{
+
+        .footer-brand-title {
             font-size: 30px;
             font-weight: bold;
             margin-bottom: 20px;
         }
-        aside span{
+
+        aside span {
             font-size: 18px;
             margin-right: 6px;
+        }
+
+        .info-container {
+            display: grid;
+            grid-template-columns: 3fr 3fr 3fr 3fr;
+            width: 80%;
+            margin: auto;
+            margin-top: 30px;
+            border-bottom: 1px solid black;
+            padding-bottom: 16px;
+        }
+
+        .info-item span {
+            font-size: 20px;
+            margin-top: 4px;
+        }
+
+        .info-item div:first-child {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .info-item div:last-child {
+            margin-left: 52.5px;
+            font-size: 12px;
+            text-align: center;
+            color: gray;
+        }
+
+        .best-pics-container {
+            padding: 100px 0px 100px 0px;
+        }
+
+        .best-pics-title {
+            text-align: center;
+        }
+
+        .pics-main-title {
+            color: gray;
+            margin-bottom: 20px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .best-pics-year {
+            font-size: 40px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .best-pics-title p {
+            width: 40%;
+            line-height: 28px;
+            margin: auto;
+        }
+
+        .best-collection-1 {
+            padding-top: 40px;
+            width: 80%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 4fr 8fr;
+            grid-gap: 20px;
+        }
+
+        .best-collection-1 div:first-child {
+            background-image: url('../../images/shopper_product-1.jpg');
+            width: 100%;
+            height: 400px;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .best-collection-1 div:last-child {
+            background-image: url('../../images/shopper_product-2.jpg');
+            width: 100%;
+            height: 400px;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 30px;
+        }
+
+        .best-collection-1 h1 {
+            font-size: 30px;
+            margin-bottom: 14px;
+        }
+
+
+        .best-collection-2 {
+            padding-top: 40px;
+            width: 80%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 8fr 4fr;
+            grid-gap: 20px;
+        }
+
+        .best-collection-2 div:first-child {
+            background-image: url('../../images/shopper_product-3.jpg');
+            width: 100%;
+            height: 400px;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 40px;
+        }
+
+        .best-collection-2 div:last-child {
+            background-image: url('../../images/shopper_product-4.jpg');
+            width: 100%;
+            height: 400px;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+
+        }
+
+        .best-collection-2 h1 {
+            font-size: 30px;
+            margin-bottom: 14px;
+        }
+
+        .top-month-sell-container {
+            width: 80%;
+            margin: auto;
+            padding: 40px 0px 80px 0px;
+        }
+
+        .top-month-titles {
+            text-align: center;
+        }
+
+        .top-month-titles h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .top-month-titles div {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .top-month-titles span:first-child {
+            color: #e96036;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        .top-sell-products {
+            display: grid;
+            grid-template-columns: 3fr 3fr 3fr 3fr;
+            grid-gap: 30px;
+            margin-top: 40px;
+        }
+
+        .sell-card-footer div:first-child {
+            margin-top: 16px;
+            color: gray;
+            font-size: 12.6px;
+            margin-bottom: 6px;
+        }
+
+        .sell-card-footer div:nth-child(2) {
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        .sell-card-footer div:last-child {
+            color: gray;
+            font-weight: bold;
+            font-size: 14.5px;
+            margin-bottom: 16px;
+        }
+
+        strike {
+            font-size: 14px;
+        }
+
+        .actual-price {
+            color: #e96036;
+        }
+
+        .discover-more {
+            padding-bottom: 40px;
+        }
+
+        .discover-more h4 {
+            text-align: center;
+            text-decoration: underline;
+            margin-bottom: 80px;
+        }
+
+        .banner {
+            position: relative;
+            background-image: url('../../images/shopper_cover.jpg');
+            width: 100%;
+            height: 600px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .banner-info {
+            position: absolute;
+            top: 140px;
+            right: 200px;
+        }
+
+        .banner h1 {
+            width: 80%;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .date-container {
+            display: flex;
+            gap: 20px;
+            font-size: 28px;
+            color: #FF6F61;
+            text-align: center;
+        }
+
+        .date-container p {
+            font-size: 13px;
+            margin-left: -10px;
+        }
+
+        .banner-info .btn-shop {
+            background-color: black;
+            color: white;
+            padding: 16px 0px 16px 0px;
+            margin-top: 30px;
         }
     </style>
 </head>
@@ -205,6 +468,182 @@
                 </div>
             </div>
         </main>
+
+        <div class="info-container">
+            <div class="info-item">
+                <div><span class="bi bi-truck"></span> FREE SHOPPING</div>
+                <div>From all orders over $100</div>
+            </div>
+            <div class="info-item">
+                <div><span class="bi bi-repeat"></span> FREE SHOPPING</div>
+                <div>From all orders over $100</div>
+            </div>
+            <div class="info-item">
+                <div><span class="bi bi-lock"></span> FREE SHOPPING</div>
+                <div>From all orders over $100</div>
+            </div>
+            <div class="info-item">
+                <div><span class="bi bi-tag"></span> FREE SHOPPING</div>
+                <div>From all orders over $100</div>
+            </div>
+        </div>
+
+        <div class="best-pics-container">
+            <div class="best-pics-title">
+                <div class="pics-main-title">NEW COLLECTION</div>
+                <div class="best-pics-year">Best Picks 2019</div>
+                <p>
+                    Appear, dry there darkness they're seas, dry waters thing fly midst. Beast, above fly brought
+                    Very green.
+                </p>
+            </div>
+            <div>
+                <div class="best-collection-1">
+                    <div>
+                        <h1>Bags Collection</h1>
+                        <p>Shop Now <span class="bi bi-arrow-right"></span></p>
+                    </div>
+                    <div>
+                        <h1>Bags Collection</h1>
+                        <p>Shop Now <span class="bi bi-arrow-right"></span></p>
+                    </div>
+                </div>
+                <div class="best-collection-2">
+                    <div>
+                        <h1>Bags Collection</h1>
+                        <p>Shop Now <span class="bi bi-arrow-right"></span></p>
+                    </div>
+                    <div>
+                        <h1>Bags Collection</h1>
+                        <p>Shop Now <span class="bi bi-arrow-right"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="top-month-sell-container">
+            <div class="top-month-titles">
+                <h1>Top month Sellers</h1>
+                <div>
+                    <span>Women</span>
+                    <span>Men</span>
+                    <span>Kids</span>
+                </div>
+            </div>
+            <div class="top-sell-products">
+                <div class="sell-card">
+                    <div class="sell-card-header">
+                        <img src="../../images/shopper_product-5.jpg" width="100%" />
+                    </div>
+                    <div class="sell-card-footer">
+                        <div>Shoes</div>
+                        <div>Leather mind-heel Sandals</div>
+                        <div>$129.00</div>
+                    </div>
+                </div>
+                <div class="sell-card">
+                    <div class="sell-card-header">
+                        <img src="../../images/shopper_product-6.jpg" width="100%" />
+                    </div>
+                    <div class="sell-card-footer">
+                        <div>Dresses</div>
+                        <div>Cotton floral print Dress</div>
+                        <div>$40.00</div>
+                    </div>
+                </div>
+                <div class="sell-card">
+                    <div class="sell-card-header">
+                        <img src="../../images/shopper_product-7.jpg" width="100%" />
+                    </div>
+                    <div class="sell-card-footer">
+                        <div>Shoes</div>
+                        <div>Leather Sneakers</div>
+                        <div><strike>$85.00</strike> <span class="actual-price">$69.00</span></div>
+                    </div>
+                </div>
+                <div class="sell-card">
+                    <div class="sell-card-header">
+                        <img src="../../images/shopper_product-8.jpg" width="100%" />
+                    </div>
+                    <div class="sell-card-footer">
+                        <div>Tops</div>
+                        <div>Cropped cotton Top</div>
+                        <div>$29.00</div>
+                    </div>
+                </div>
+                <div class="sell-card">
+                    <div class="sell-card-header">
+                        <img src="../../images/shopper_product-9.jpg" width="100%" />
+                    </div>
+                    <div class="sell-card-footer">
+                        <div>Dresses</div>
+                        <div>Floral print midi Dress</div>
+                        <div>$50.00</div>
+                    </div>
+                </div>
+                <div class="sell-card">
+                    <div class="sell-card-header">
+                        <img src="../../images/shopper_product-10.jpg" width="100%" />
+                    </div>
+                    <div class="sell-card-footer">
+                        <div>Bags</div>
+                        <div>Suede cross body Bag</div>
+                        <div><strike>$79.00</strike> <span class="actual-price">$49.00</span></div>
+                    </div>
+                </div>
+                <div class="sell-card">
+                    <div class="sell-card-header">
+                        <img src="../../images/shopper_product-11.jpg" width="100%" />
+                    </div>
+                    <div class="sell-card-footer">
+                        <div>Skirts</div>
+                        <div>Printed A-line Skirt</div>
+                        <div>$79.00</div>
+                    </div>
+                </div>
+                <div class="sell-card">
+                    <div class="sell-card-header">
+                        <img src="../../images/shopper_product-12.jpg" width="100%" />
+                    </div>
+                    <div class="sell-card-footer">
+                        <div>Shoes</div>
+                        <div>Heel strappy Sandals</div>
+                        <div>$90.00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="discover-more">
+            <h4>Discover more</h4>
+            <div class="banner">
+                <div class="banner-info">
+                    <h1>Get -50% from Summer Collection</h1>
+                    <div class="date-container">
+                        <div>
+                            <h2>429 :</h2>
+                            <p>Days</p>
+                        </div>
+                        <div>
+                            <h2>14 :</h2>
+                            <p>Hours</p>
+                        </div>
+                        <div>
+                            <h2>42 :</h2>
+                            <p>Minutes</p>
+                        </div>
+                        <div>
+                            <h2>18 &nbsp;</h2>
+                            <p>Seconds</p>
+                        </div>
+                    </div>
+                    <div class="btn-shop">
+                        Shop Now <span class="bi bi-arrow-right"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </section>
     <footer>
         <div class="row-1">
