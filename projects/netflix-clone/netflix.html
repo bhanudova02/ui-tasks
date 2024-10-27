@@ -31,33 +31,33 @@
             background-color: rgba(0, 0, 0, 0.6);
             color: white;
         }
-
-        header {
-            font-family: Arial;
-            color: white;
+        header{
+            padding-top: 20px;
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            padding: 30px;
+            width: 80%;
+            margin: auto;
         }
 
-        .brand-title {
-            color: red;
-            font-weight: bold;
-            font-size: 40px;
+        .header-row-2{
+            display: flex;
+            align-items: center;
+            align-items: center;
         }
+
 
         .language {
-            border: 1px solid white;
+            display: flex;
+            gap: 6px;
+            border: 1px solid gray;
             padding: 10px;
             border-radius: 6px;
             margin-right: 20px;
             background-color: rgba(0, 0, 0, 0.6);
         }
-
+       
         .btn-sign-in {
             background-color: red;
-            padding: 10px;
+            padding: 10px 20px 10px 20px;
             border-radius: 6px;
         }
 
@@ -258,13 +258,14 @@
     <div class="main-container">
         <div class="shade">
             <header>
-                <div>
-                    <span class="brand-title">NETFLIX</span>
+                <div class="header-row-1">
+                    <img src="../../images/Netflix_Logo_PMS.png" width="24%" alt="">
                 </div>
-                <div>
-                    <span class="language"><span class="bi bi-translate"></span> English <span
-                            class="bi bi-chevron-down"></span></span>
-                    <span class="btn-sign-in">SignIn</span>
+                <div class="header-row-2">
+                    <div class="language">
+                      <span class="bi bi-translate"></span> English <span class="bi bi-chevron-down"></span>
+                    </div>
+                    <div class="btn-sign-in">SignIn</div>
                 </div>
             </header>
             <section>
