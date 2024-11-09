@@ -21,14 +21,13 @@
 
 </head>
 
-<body>
+<body onload="scrollToBottom()">
     <header>
         <iframe src="task_files/mian-header.html" width="100%" height="100px" frameborder="0"></iframe>
     </header>
     <section>
-
-         <!-- LeetCode -->
-         <div>
+        <!-- LeetCode -->
+        <div>
             <h4 class="task-heading">LeetCode-UI
                 <a href="./task_files/leet-code.html" download=""> Download Code <span class="bi bi-download"></span></a>
             </h4>
@@ -58,18 +57,23 @@
             <h4 class="task-heading">Spotify Cards-UI
                 <a href="./task_files/spotify-cards.html" download=""> Download Code <span class="bi bi-download"></span></a>
             </h4>
-            <iframe src="task_files/spotify-cards.html" width="100%" height="600px" frameborder="0"></iframe>
+            <iframe src="task_files/spotify-cards.html" width="100%" height="700px" frameborder="0"></iframe>
         </div>
 
         <!-- Icc Ranking Cards -->
         <div style="margin-top: 20px;">
             <h4 class="task-heading">ICC-Ranking Cards
-                <a href="./task_files/spotify-cards.html" download=""> Download Code <span class="bi bi-download"></span></a>
+                <a href="./task_files/icc-rankings.html" download=""> Download Code <span class="bi bi-download"></span></a>
             </h4>
-            <iframe src="task_files/icc-rankings.html" width="100%" height="600px" frameborder="0"></iframe>
+            <iframe src="task_files/icc-rankings.html" width="100%" height="450px" frameborder="0"></iframe>
         </div>
-
     </section>
+
+    <script>
+        function scrollToBottom() {
+            window.scrollTo(0, document.body.scrollHeight);
+        }
+    </script>
 </body>
 
 </html>
