@@ -16,24 +16,34 @@
             font-family: Arial;
         }
 
-        thead {
+        .thead-1 {
             border-bottom: 2px solid green;
+        }
+        .thead-2 {
+            border-bottom: 2px solid rgb(18, 207, 144);
+        }
+        .thead-3 {
+            border-bottom: 2px solid rgb(224, 5, 195);
         }
 
         .bi-circle-fill {
             font-size: 7px;
             color: gray;
         }
+        .table{
+            box-shadow: 2px 2px 2px black;
+        }
     </style>
 </head>
 
 <body>
     <div class="ms-2">
+        <h2 class="fw-bold text-uppercase text-dark">Men's all-rounder rankings</h2>
         <table>
             <tr class="d-flex gap-3">
                 <td>
                     <table class="table border border-3">
-                        <thead>
+                        <thead class="thead-1">
                             <tr>
                                 <th style="font-size: 15px;" colspan="3" class="text-uppercase"><span
                                         class="fw-normal">test</span> - allrounder Rankings</th>
@@ -166,7 +176,7 @@
                 </td>
                 <td>
                     <table class="table border border-3">
-                        <thead>
+                        <thead class="thead-2">
                             <tr>
                                 <th style="font-size: 15px;" colspan="3" class="text-uppercase">
                                     <span class="fw-normal">odi</span> - allrounder Rankings
@@ -302,7 +312,7 @@
                 </td>
                 <td>
                     <table class="table border border-3">
-                        <thead>
+                        <thead class="thead-3">
                             <tr>
                                 <th style="font-size: 15px;" colspan="3" class="text-uppercase"><span
                                         class="fw-normal">test</span> - bowling Rankings</th>
