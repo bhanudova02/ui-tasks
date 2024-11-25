@@ -11,332 +11,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="../../src/styles/shopper.css">
     <style>
         body {
             font-family: Arial;
-        }
-
-        .w-fashion {
-            height: 470px;
-            background-image: url('../../images/women-fashion.jpg');
-            background-size: cover;
-        }
-
-        .k-fashion {
-            height: 470px;
-            background-image: url('../../images/kids-fashion.jpg');
-            background-size: cover;
-        }
-
-        .m-fashion {
-            height: 470px;
-            background-image: url('../../images/men-fashion.jpg');
-            background-size: cover;
-        }
-
-        .best-collection-1 {
-            height: 400px;
-            background-image: url('../../images/shopper_product-1.jpg');
-            background-size: cover;
-        }
-
-        .best-collection-2 {
-            height: 400px;
-            background-image: url('../../images/shopper_product-2.jpg');
-            background-size: cover;
-        }
-
-        .best-collection-3 {
-            height: 400px;
-            background-image: url('../../images/shopper_product-3.jpg');
-            background-size: cover;
-        }
-
-        .best-collection-4 {
-            height: 400px;
-            background-image: url('../../images/shopper_product-4.jpg');
-            background-size: cover;
-        }
-
-        .underline {
-            text-decoration: underline 2px solid #FF7DA3;
-            color: #FF7DA3;
-        }
-
-        .discover-title {
-            text-decoration: underline;
-        }
-
-
-        .buy-card {
-            border: 1px solid rgba(128, 128, 128, 0.5);
-            padding: 24px;
-            height: fit-content;
-        }
-
-        .buy-card-header {
-            display: grid;
-            grid-template-columns: 3fr 9fr;
-            grid-gap: 20px;
-        }
-
-        .by-card-title {
-            color: gray;
-            font-weight: 500;
-            font-size: 14.5px;
-            margin-bottom: 6px;
-        }
-
-        .by-card-sub-title {
-            font-weight: bold;
-            font-size: 15px;
-            margin-bottom: 6px;
-        }
-
-        .by-card-rating {
-            color: #FF9736;
-        }
-
-        .buy-card-body {
-            color: gray;
-            line-height: 24px;
-            font-size: 15px;
-            margin-top: 12px;
-            margin-bottom: 20px;
-        }
-
-        .buy-card-footer {
-            color: gray;
-            line-height: 24px;
-            font-size: 15px;
-        }
-
-
-        .buy-card-dots {
-            display: flex;
-            justify-content: center;
-            gap: 4px;
-            margin-top: 50px;
-        }
-
-        .card-dots {
-            width: 8px;
-            height: 8px;
-            background-color: rgba(128, 128, 128, 0.377);
-            border-radius: 100%;
-        }
-
-        .buy-card-dots div:first-child {
-            background-color: #FF6F61;
-        }
-
-        .shopper-brands-title h1 {
-            margin-bottom: 14px;
-            font-size: 30px;
-        }
-
-        .shopper-brands-title div {
-            color: gray;
-        }
-
-        .shopper-brand-logos div {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .shopper-brand-logos img {
-            width: 80%;
-            height: 100px;
-            background-size: contain;
-        }
-
-        .service-title {
-            font-size: 20px;
-            font-weight: bold;
-            display: block;
-            margin-bottom: 10px;
-            font-size: 16px;
-        }
-
-        .service-title~span {
-            display: block;
-            margin-bottom: 6px;
-            font-size: 13px;
-        }
-
-        .footer-brand-title {
-            font-size: 26px;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-
-        @media screen and (orientation:landscape) {
-            .best-col-container {
-                width: 50%;
-                margin: auto;
-            }
-
-            .collection-container-1 {
-                display: grid;
-                grid-template-columns: 4fr 8fr;
-                gap: 30px;
-            }
-
-            .collection-container-2 {
-                display: grid;
-                grid-template-columns: 8fr 4fr;
-                gap: 30px;
-            }
-
-            .sellers-container {
-                display: grid;
-                grid-template-columns: 3fr 3fr 3fr 3fr;
-                gap: 20px;
-            }
-
-            .banner {
-                background-image: url('../../images/shopper_cover.jpg');
-                width: 100%;
-                height: 550px;
-                background-size: cover;
-                background-repeat: no-repeat;
-            }
-
-            .banner:first-child div {
-                right: 280px;
-                top: 140px;
-            }
-
-
-            .shopper-brands {
-                background-color: #F5F5F5;
-                padding: 10px;
-                padding: 80px 0px 80px 0px;
-            }
-
-            .shopper-brand-container {
-                width: 80%;
-                margin: auto;
-                display: grid;
-                grid-template-columns: 2fr 2fr 2fr 2fr 2fr 2fr;
-                grid-gap: 20px;
-                margin-top: 40px;
-            }
-
-            .shopper-brands-title {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .shopper-brand-logos {
-                width: 80%;
-                margin: auto;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .input-group {
-                width: 40%;
-            }
-
-            .footer-section {
-                display: grid;
-                grid-template-columns: 2.4fr 2.4fr 2.4fr 2.4fr 2.4fr;
-            }
-
-
-        }
-
-        @media screen and (orientation:portrait) {
-            .best-col-container {
-                width: 100%;
-                margin: auto;
-            }
-
-            .collection-container-1 {
-                display: grid;
-                grid-template-columns: 12fr;
-                gap: 30px;
-            }
-
-            .collection-container-2 {
-                display: grid;
-                grid-template-columns: 12fr;
-                gap: 30px;
-            }
-
-            .best-collection-3 {
-                background-position: center;
-            }
-
-            .best-collection-2 {
-                background-position: center;
-
-            }
-
-            .sellers-container {
-                display: grid;
-                grid-template-columns: 6fr 6fr;
-                gap: 20px;
-            }
-
-            .banner {
-                background-image: url('../../images/shopper_cover.jpg');
-                width: 100%;
-                height: 550px;
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-            }
-
-            .banner:first-child div {
-                top: 140px;
-                left: 20px;
-            }
-
-
-            .shopper-brands {
-                background-color: #F5F5F5;
-                padding: 10px;
-                padding: 80px 0px 10px 0px;
-            }
-
-            .shopper-brand-container {
-                width: 90%;
-                margin: auto;
-                display: grid;
-                grid-template-columns: 6fr 6fr;
-                grid-gap: 20px;
-                margin-top: 40px;
-            }
-
-            .shopper-brands-title {
-                text-align: center;
-                padding: 0px 20px;
-            }
-
-            .shopper-brand-logos {
-                width: 90%;
-                display: grid;
-                grid-template-columns: 4fr 4fr 4fr;
-                margin: auto;
-            }
-
-            .input-group {
-                width: 90%;
-            }
-
-            .footer-section {
-                display: grid;
-                grid-template-columns: 6fr 6fr;
-                gap: 20px;
-            }
-
         }
     </style>
 </head>
@@ -370,27 +48,23 @@
     </article>
     <section>
         <main>
-
             <div class="row mx-0 mt-3">
                 <div class="col w-fashion px-0">
-                    <div class="w-100 h-100 d-flex flex-column justify-content-center align-items-center"
-                        style="background-color: rgba(0, 0, 0, 0.2); gap:100px;">
+                    <div class="w-100 h-100 d-flex flex-column justify-content-center align-items-center hero-hover">
                         <h1 class="fw-bold text-white" style="margin-top: 100px;">Women</h1>
                         <button class="btn btn-light w-50 rounded-0 fw-bold" style="padding: 10px;">Shop Women <span
                                 class="bi bi-arrow-right"></span></button>
                     </div>
                 </div>
                 <div class="col k-fashion d-none d-lg-block px-0">
-                    <div class="w-100 h-100 d-flex flex-column justify-content-center align-items-center"
-                        style="background-color: rgba(0, 0, 0, 0.2); gap:100px;">
+                    <div class="w-100 h-100 d-flex flex-column justify-content-center align-items-center hero-hover">
                         <h1 class="fw-bold text-white" style="margin-top: 100px;">Men</h1>
                         <button class="btn btn-light w-50 rounded-0 fw-bold" style="padding: 10px;">Shop Men <span
                                 class="bi bi-arrow-right"></span></button>
                     </div>
                 </div>
                 <div class="col m-fashion d-none d-lg-block px-0">
-                    <div class="w-100 h-100 d-flex flex-column justify-content-center align-items-center"
-                        style="background-color: rgba(0, 0, 0, 0.2); gap:100px;">
+                    <div class="w-100 h-100 d-flex flex-column justify-content-center align-items-center hero-hover">
                         <h1 class="fw-bold text-white" style="margin-top: 100px;">Kids</h1>
                         <button class="btn btn-light w-50 rounded-0 fw-bold" style="padding: 10px;">Shop Kids <span
                                 class="bi bi-arrow-right"></span></button>
@@ -453,42 +127,50 @@
                     </div>
                 </div>
                 <div class="collection-container-1">
-                    <div class="best-collection-1">
-                        <div class="w-100 h-100 d-flex flex-column justify-content-center align-items-center"
-                            style="background-color: rgba(0, 0, 0, 0.1);">
-                            <h3 class="fw-bold text-white">Best Collection</h3>
-                            <h5 class="text-white fw-bold" style="padding: 10px;">
-                                Shop Now <span class="bi bi-arrow-right"></span>
-                            </h5>
+                    <div class="best-collection">
+                        <div class="best-col-img-1" id="best-col-img">
+                            <div class="w-100 h-100 d-flex flex-column justify-content-center align-items-center "
+                                style="background-color: rgba(0, 0, 0, 0.1);">
+                                <h3 class="fw-bold text-white">Best Collection</h3>
+                                <h5 class="text-white fw-bold" style="padding: 10px;">
+                                    Shop Now <span class="bi bi-arrow-right"></span>
+                                </h5>
+                            </div>
                         </div>
                     </div>
-                    <div class="best-collection-2">
-                        <div class="w-100 h-100 d-flex flex-column justify-content-center align-items-center align-items-lg-start px-0 ps-lg-5"
-                            style="background-color: rgba(0, 0, 0, 0.1);">
-                            <h3 class="fw-bold text-black">Printed men's Shirts</h3>
-                            <h5 class="text-black fw-bold" style="padding: 10px;">
-                                Shop Now <span class="bi bi-arrow-right"></span>
-                            </h5>
+                    <div class="best-collection">
+                        <div class="best-col-img-2" id="best-col-img">
+                            <div class="w-100 h-100 d-flex flex-column justify-content-center align-items-center align-items-lg-start px-0 ps-lg-5"
+                                style="background-color: rgba(0, 0, 0, 0.1);">
+                                <h3 class="fw-bold text-black">Printed men's Shirts</h3>
+                                <h5 class="text-black fw-bold" style="padding: 10px;">
+                                    Shop Now <span class="bi bi-arrow-right"></span>
+                                </h5>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="collection-container-2 mt-4">
-                    <div class="best-collection-3">
-                        <div class="w-100 h-100 d-flex flex-column justify-content-center align-items-center align-items-lg-start px-0 ps-lg-5"
-                            style="background-color: rgba(0, 0, 0, 0.0);">
-                            <h3 class="fw-bold text-black">Basic women's Dresses</h3>
-                            <h5 class="text-black fw-bold" style="padding: 10px;">
-                                Shop Now <span class="bi bi-arrow-right"></span>
-                            </h5>
+                    <div class="best-collection">
+                        <div class="best-col-img-3" id="best-col-img">
+                            <div class="w-100 h-100 d-flex flex-column justify-content-center align-items-center align-items-lg-start px-0 ps-lg-5"
+                                style="background-color: rgba(0, 0, 0, 0.0);">
+                                <h3 class="fw-bold text-black">Basic women's Dresses</h3>
+                                <h5 class="text-black fw-bold" style="padding: 10px;">
+                                    Shop Now <span class="bi bi-arrow-right"></span>
+                                </h5>
+                            </div>
                         </div>
                     </div>
-                    <div class="best-collection-4">
-                        <div class="w-100 h-100 d-flex flex-column justify-content-center align-items-center"
-                            style="background-color: rgba(0, 0, 0, 0.1);">
-                            <h3 class="fw-bold text-white">Sweatshirts</h3>
-                            <h5 class="text-white fw-bold" style="padding: 10px;">
-                                Shop Now <span class="bi bi-arrow-right"></span>
-                            </h5>
+                    <div class="best-collection">
+                        <div class="best-col-img-4" id="best-col-img">
+                            <div class="w-100 h-100 d-flex flex-column justify-content-center align-items-center"
+                                style="background-color: rgba(0, 0, 0, 0.1);">
+                                <h3 class="fw-bold text-white">Sweatshirts</h3>
+                                <h5 class="text-white fw-bold" style="padding: 10px;">
+                                    Shop Now <span class="bi bi-arrow-right"></span>
+                                </h5>
+                            </div>
                         </div>
                     </div>
                 </div>
