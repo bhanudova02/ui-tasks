@@ -20,25 +20,46 @@
 </head>
 
 <body>
-    <header class="d-flex justify-content-between align-items-center px-3 px-lg-5 py-4">
-        <h2 class="fw-bold my-auto">Shopper.</h2>
-        <nav class="d-lg-flex d-none gap-5 fw-semibold" style="font-size: 16.8px;">
-            <span>Home</span>
-            <span>Catalog</span>
-            <span>Shop</span>
-            <span>Blog</span>
-            <span>Docs</span>
-        </nav>
-        <div class="d-lg-flex d-none align-items-center gap-3">
-            <span class="bi bi-search"></span>
-            <span class="bi bi-person"></span>
-            <span class="bi bi-heart"></span>
-            <span class="bi bi-cart2"></span>
+
+
+    <header>
+        <div class="d-flex justify-content-between align-items-center px-3 px-lg-5 py-4">
+            <h2 class="fw-bold my-auto">Shopper.</h2>
+            <nav class="d-lg-flex d-none gap-5 fw-semibold" style="font-size: 16.8px;">
+                <span>Home</span>
+                <span>Catalog</span>
+                <span>Shop</span>
+                <span>Blog</span>
+                <span>Docs</span>
+            </nav>
+            <div class="d-lg-flex d-none align-items-center gap-3">
+                <span class="bi bi-search"></span>
+                <span class="bi bi-person"></span>
+                <span class="bi bi-heart"></span>
+                <span class="bi bi-cart2"></span>
+            </div>
+            <button class="d-lg-none btn p-0 fs-4 bi bi-justify border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#mobileMenu" aria-expanded="false" aria-controls="mobileMenu"></button>
         </div>
-        <div class="d-lg-none d-block">
-            <span class="fs-4 bi bi-justify"></span>
+        <div class="collapse" id="mobileMenu">
+            <div class="px-3 py-3">
+                <nav class="d-flex flex-column gap-3 fw-semibold" style="font-size: 16.8px;">
+                    <span>Home</span>
+                    <span>Catalog</span>
+                    <span>Shop</span>
+                    <span>Blog</span>
+                    <span>Docs</span>
+                </nav>
+                <div class="d-flex justify-content-start align-items-center gap-3 mt-3">
+                    <span class="bi bi-search"></span>
+                    <span class="bi bi-person"></span>
+                    <span class="bi bi-heart"></span>
+                    <span class="bi bi-cart2"></span>
+                </div>
+            </div>
         </div>
     </header>
+
     <article class="bg-dark text-white p-3 d-flex justify-content-center align-items-center">
         <div>
             <span class="bi bi-lightning-fill text-warning"></span>
@@ -189,7 +210,13 @@
                 </div>
                 <div class="sellers-container">
                     <div>
-                        <img src="../../images/shopper_product-5.jpg" width="100%">
+                        <div class="seller-container" id="icons-hover">
+                            <div class="icons">
+                                <span class="bi bi-eye bg-white p-2 rounded-3"></span>
+                                <span class="bi bi-cart bg-white p-2 rounded-3"></span>
+                                <span class="bi bi-heart bg-white p-2 rounded-3"></span>
+                            </div>
+                        </div>
                         <div>
                             <span class="text-secondary d-inline-block pt-3">Shoes</span>
                             <h6 class="fw-bold my-0">Leather mid-heel Sandals</h6>
@@ -197,15 +224,13 @@
                         </div>
                     </div>
                     <div>
-                        <img src="../../images/shopper_product-6.jpg" width="100%">
-                        <div>
-                            <span class="text-secondary d-inline-block pt-3">Dresses</span>
-                            <h6 class="fw-bold my-0">Cotton floral print Dress</h6>
-                            <h6 class="fw-bold pt-1 text-secondary pb-4">$40.00</h6>
+                        <div class="seller-container-1" id="icons-hover">
+                            <div class="icons">
+                                <span class="bi bi-eye bg-white p-2 rounded-3"></span>
+                                <span class="bi bi-cart bg-white p-2 rounded-3"></span>
+                                <span class="bi bi-heart bg-white p-2 rounded-3"></span>
+                            </div>
                         </div>
-                    </div>
-                    <div>
-                        <img src="../../images/shopper_product-7.jpg" width="100%">
                         <div>
                             <span class="text-secondary d-inline-block pt-3">Shoes</span>
                             <h6 class="fw-bold my-0">Leather Sneakers</h6>
@@ -214,7 +239,13 @@
                         </div>
                     </div>
                     <div>
-                        <img src="../../images/shopper_product-8.jpg" width="100%">
+                        <div class="seller-container-2" id="icons-hover">
+                            <div class="icons">
+                                <span class="bi bi-eye bg-white p-2 rounded-3"></span>
+                                <span class="bi bi-cart bg-white p-2 rounded-3"></span>
+                                <span class="bi bi-heart bg-white p-2 rounded-3"></span>
+                            </div>
+                        </div>
                         <div>
                             <span class="text-secondary d-inline-block pt-3">Tops</span>
                             <h6 class="fw-bold my-0">Cropped cotton Top</h6>
@@ -222,7 +253,13 @@
                         </div>
                     </div>
                     <div>
-                        <img src="../../images/shopper_product-9.jpg" width="100%">
+                        <div class="seller-container-3" id="icons-hover">
+                            <div class="icons">
+                                <span class="bi bi-eye bg-white p-2 rounded-3"></span>
+                                <span class="bi bi-cart bg-white p-2 rounded-3"></span>
+                                <span class="bi bi-heart bg-white p-2 rounded-3"></span>
+                            </div>
+                        </div>
                         <div>
                             <span class="text-secondary d-inline-block pt-3">Dresses</span>
                             <h6 class="fw-bold my-0">Floral print midi Dress</h6>
@@ -230,7 +267,41 @@
                         </div>
                     </div>
                     <div>
-                        <img src="../../images/shopper_product-10.jpg" width="100%">
+                        <div class="seller-container-4" id="icons-hover">
+                            <div class="icons">
+                                <span class="bi bi-eye bg-white p-2 rounded-3"></span>
+                                <span class="bi bi-cart bg-white p-2 rounded-3"></span>
+                                <span class="bi bi-heart bg-white p-2 rounded-3"></span>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="text-secondary d-inline-block pt-3">Dresses</span>
+                            <h6 class="fw-bold my-0">Cotton floral print Dress</h6>
+                            <h6 class="fw-bold pt-1 text-secondary pb-4">$40.00</h6>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="seller-container-5" id="icons-hover">
+                            <div class="icons">
+                                <span class="bi bi-eye bg-white p-2 rounded-3"></span>
+                                <span class="bi bi-cart bg-white p-2 rounded-3"></span>
+                                <span class="bi bi-heart bg-white p-2 rounded-3"></span>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="text-secondary d-inline-block pt-3">Skirts</span>
+                            <h6 class="fw-bold my-0">Printed A-line Skirt</h6>
+                            <h6 class="fw-bold pt-1 text-secondary pb-4">$79.00</h6>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="seller-container-6" id="icons-hover">
+                            <div class="icons">
+                                <span class="bi bi-eye bg-white p-2 rounded-3"></span>
+                                <span class="bi bi-cart bg-white p-2 rounded-3"></span>
+                                <span class="bi bi-heart bg-white p-2 rounded-3"></span>
+                            </div>
+                        </div>
                         <div>
                             <span class="text-secondary d-inline-block pt-3">Bags</span>
                             <h6 class="fw-bold my-0">Suede cross body Bag</h6>
@@ -239,15 +310,13 @@
                         </div>
                     </div>
                     <div>
-                        <img src="../../images/shopper_product-11.jpg" width="100%">
-                        <div>
-                            <span class="text-secondary d-inline-block pt-3">Skirts</span>
-                            <h6 class="fw-bold my-0">Printed A-line Skirt</h6>
-                            <h6 class="fw-bold pt-1 text-secondary pb-4">$79.00</h6>
+                        <div class="seller-container-7" id="icons-hover">
+                            <div class="icons">
+                                <span class="bi bi-eye bg-white p-2 rounded-3"></span>
+                                <span class="bi bi-cart bg-white p-2 rounded-3"></span>
+                                <span class="bi bi-heart bg-white p-2 rounded-3"></span>
+                            </div>
                         </div>
-                    </div>
-                    <div>
-                        <img src="../../images/shopper_product-5.jpg" width="100%">
                         <div>
                             <span class="text-secondary d-inline-block pt-3">Shoes</span>
                             <h6 class="fw-bold my-0">Heel strappy Sandals</h6>
