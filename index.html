@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./src/styles/style.css">
+    <link rel="stylesheet" href="./src/styles/header-style.css">
     <style>
         header {
             position: sticky;
@@ -18,15 +20,56 @@
         }
     </style>
 </head>
+
 <body onload="scrollToBottom()">
     <header>
-        <iframe src="task_files/mian-header.html" width="100%" height="100px" frameborder="0"></iframe>
+        <div>
+            <h2>Mr.Bhanu</h2>
+        </div>
+        <ul>
+            <li class="home">Home(UI-Tasks)</li>
+            <li class="pointer">
+                <div class="dropdown">
+                    <div data-bs-toggle="dropdown" class=" dropdown-toggle">
+                        JS Example
+                    </div>
+                    <ul class="dropdown-menu z-3" data-bs-theme="dark">
+                        <li class="dropdown-item">
+                            <a href="./task_files/likesCount.html" target="_blank">
+                                <span class="dropdown-item-text">Likes Increment</span>
+                            </a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="./task_files/captcha-generate.html" target="_blank">
+                                <span class="dropdown-item-text">Generate Code</span>
+                            </a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="./task_files/emi-calculator.html" target="_blank">
+                                <span class="dropdown-item-text">EMI Calculator</span>
+                            </a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="./projects/javascript-examples/admin-dashboard.html" target="_blank">
+                                <span class="dropdown-item-text">Admin Dashboard</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="../projects/youtube/youtube.html" target="_blank">Youtube-Clone</a></li>
+            <li><a href="../projects/spotify/spotify.html" target="_blank">Spotify-Clone</a></li>
+            <li><a href="../projects/netflix-clone/netflix.html" target="_blank">Netflix-Clone</a></li>
+            <li><a href="../projects/shopper/shopper-template.html" target="_blank">.Shopper-Clone</a></li>
+            <li><a href="https://portfolio-delta-eight-70.vercel.app/" target="_blank">Portfolio</a></li>
+        </ul>
     </header>
-    <section>
+    <section style="margin-top: 30px;">
         <!-- LeetCode -->
         <div>
             <h4 class="task-heading">LeetCode-UI
-                <a href="./task_files/leet-code.html" download=""> Download Code <span class="bi bi-download"></span></a>
+                <a href="./task_files/leet-code.html" download=""> Download Code <span
+                        class="bi bi-download"></span></a>
             </h4>
             <iframe src="task_files/leet-code.html" width="100%" height="740px" frameborder="0"></iframe>
         </div>
@@ -34,8 +77,9 @@
         <!-- Flipkat Footer -->
         <div>
             <div class="heading-download">
-                <h4 class="task-heading">Flipkart Footer-UI 
-                    <a href="./task_files/flipkart-footer.html" download=""> Download Code <span class="bi bi-download"></span></a>
+                <h4 class="task-heading">Flipkart Footer-UI
+                    <a href="./task_files/flipkart-footer.html" download=""> Download Code <span
+                            class="bi bi-download"></span></a>
                 </h4>
             </div>
             <iframe src="task_files/flipkart-footer.html" width="100%" height="500px" frameborder="0"></iframe>
@@ -44,7 +88,8 @@
         <!-- Amazon Cards -->
         <div>
             <h4 class="task-heading">Amazon Cards-UI
-                <a href="./task_files/amazon-card.html" download=""> Download Code <span class="bi bi-download"></span></a>
+                <a href="./task_files/amazon-card.html" download=""> Download Code <span
+                        class="bi bi-download"></span></a>
             </h4>
             <iframe src="task_files/amazon-card.html" width="100%" height="800px" frameborder="0"></iframe>
         </div>
@@ -52,40 +97,45 @@
         <!-- Spotify Card -->
         <div>
             <h4 class="task-heading">Spotify Cards-UI
-                <a href="./task_files/spotify-cards.html" download=""> Download Code <span class="bi bi-download"></span></a>
+                <a href="./task_files/spotify-cards.html" download=""> Download Code <span
+                        class="bi bi-download"></span></a>
             </h4>
             <iframe src="task_files/spotify-cards.html" width="100%" height="700px" frameborder="0"></iframe>
         </div>
 
         <!-- Icc Ranking Cards -->
-        <div >
+        <div>
             <h4 class="task-heading">ICC-Ranking Cards
-                <a href="./task_files/icc-rankings.html" download=""> Download Code <span class="bi bi-download"></span></a>
+                <a href="./task_files/icc-rankings.html" download=""> Download Code <span
+                        class="bi bi-download"></span></a>
             </h4>
             <iframe src="task_files/icc-rankings.html" width="100%" height="600px" frameborder="0"></iframe>
         </div>
 
-          <!-- Likes Increment -->
-          <div >
+        <!-- Likes Increment -->
+        <div>
             <h4 class="task-heading">Likes Increment
-                <a href="./task_files/likesCount.html" download=""> Download Code <span class="bi bi-download"></span></a>
+                <a href="./task_files/likesCount.html" download=""> Download Code <span
+                        class="bi bi-download"></span></a>
             </h4>
             <iframe src="task_files/likesCount.html" width="100%" height="400px" frameborder="0"></iframe>
         </div>
 
         <!-- Generate Captcha Code-->
-        <div >
+        <div>
             <h4 class="task-heading">Generate Code
-                <a href="./task_files/captcha-generate.html" download=""> Download Code <span class="bi bi-download"></span></a>
+                <a href="./task_files/captcha-generate.html" download=""> Download Code <span
+                        class="bi bi-download"></span></a>
             </h4>
             <iframe src="task_files/captcha-generate.html" width="100%" height="260px" frameborder="0"></iframe>
         </div>
 
 
-         <!-- EMI Calculator -->
-         <div>
+        <!-- EMI Calculator -->
+        <div>
             <h4 class="task-heading">EMI Calculator
-                <a href="./task_files/emi-calculator.html" download=""> Download Code <span class="bi bi-download"></span></a>
+                <a href="./task_files/emi-calculator.html" download=""> Download Code <span
+                        class="bi bi-download"></span></a>
             </h4>
             <iframe src="task_files/emi-calculator.html" width="100%" height="500px" frameborder="0"></iframe>
         </div>
@@ -97,4 +147,5 @@
         }
     </script>
 </body>
+
 </html>

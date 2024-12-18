@@ -1,0 +1,39 @@
+*{
+    margin: 0px;
+}
+header{
+    background-color: #131921;
+    color: white;
+    padding: 8px 10px 8px 10px;
+    box-shadow: 2px 2px 8px gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+   
+}
+ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0px;
+    font-family: Arial;
+    font-size: 15px;
+    margin-top: 8px;
+}
+a{
+text-decoration: none;
+color: white;
+}
+.home{
+font-weight: bold;
+text-decoration: underline;
+}
+h2{
+font-family: 'Brush Script MT', cursive;
+color: white;
+letter-spacing: 2px;
+}
+.pointer{
+cursor: pointer;
+}
