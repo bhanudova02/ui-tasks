@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mars Rover Photos</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <style>
+        @media screen and (orientation: landscape) {
+            .car-container {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 1.5rem;
+            }
+        }
+
+        @media screen and (orientation: portrait) {
+            .car-container {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+
+        .card {
+            width: 300px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            cursor: pointer;
+            transform: translateY(-8px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            object-fit: cover;
+            height: 260px;
+        }
+
+        .card-header {
+            background-color: #ffffff;
+            padding: 1rem;
+        }
+
+        .card-header h6 {
+            margin-bottom: 0.5rem;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .card-header .bi {
+            font-size: 18px;
+        }
+
+        .card-header .fw-medium {
+            font-size: 14px;
+            color: #777;
+        }
+
+        .text-center {
+            color: #333;
+        }
+
+        .text-center h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: #222;
+        }
+
+        .text-center span {
+            color: #555;
+        }
+
+        .bi-camera {
+            color: #1d4ed8;
+        }
+
+        .bi-rocket {
+            color: #dc2626;
+        }
+    </style>
+
+    <script>
+        function bodyLoad() {
+            fetch("./nasa_api.json")
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (apiData) {
+                    apiData.photos.map(function (data, index) {
+                        var div = document.createElement("div");
+                        div.className = "d-flex justify-content-center mb-5"
+                        div.innerHTML = `
+                    <div>
+                        <div class="card shadow border-0">
+                            <img src=${data.img_src} width="100%" height="260" class="object-fit-cover">
+                            <div class="card-header border-0">
+                                <h6 class="fw-bold">ID: ${data.id}</h6>
+                                <div class="d-flex align-items-center gap-1">
+                                    <span class="bi bi-camera text-primary"></span>
+                                    <span class="fw-medium" style="font-size: 14px;">${data.camera.full_name}</span>
+                                </div>
+                                <div class="d-flex align-items-center gap-1">
+                                    <span class="bi bi-rocket text-danger"></span>
+                                    <span class="fw-medium" style="font-size: 14px;">${data.rover.name}</span>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <button data-bs-target="#modal${index}" data-bs-toggle="modal" class="btn btn-warning w-100">More Details</button>
+                            </div>
+                        </div>
+                        <div class="modal fade" id="modal${index}" tabindex="-1" aria-labelledby="modalLabel${index}" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content" style="border-radius: 15px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); background-color: #f8f9fa;">
+                                    <div class="modal-header" style="background-color: #333; color: white; padding: 20px; border-top-left-radius: 15px; border-top-right-radius: 15px;">
+                                        <img src="${data.img_src}" width="100%" height="200" class="object-fit-cover" style="border-radius: 12px;">
+                                    </div>
+                                    <div class="modal-body" >
+                                        <div style="font-size: 16px; color: #555;">
+                                            <p><strong style="color: #333;">Id:</strong> ${data.id}</p>
+                                            <p><strong style="color: #333;">Camera Name:</strong> ${data.camera.full_name}</p>
+                                            <p><strong style="color: #333;">Rover Name:</strong> ${data.rover.name}</p>
+                                            <p><strong style="color: #333;">Launch Date:</strong> ${data.rover.launch_date}</p>
+                                            <p><strong style="color: #333;">Landing Date:</strong> ${data.rover.landing_date}</p>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer" style="border-top: 1px solid #ddd; padding: 10px; text-align: right;">
+                                        <button class="btn btn-secondary" data-bs-dismiss="modal" style="border-radius: 30px; font-weight: bold; color: white;">Close</button>
+                                        <a href=${data.img_src} target="_blank">
+                                            <button  class="btn btn-primary" data-bs-dismiss="modal" style="border-radius: 30px; font-weight: bold;">View Full Photo</button>
+                                         </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    `;
+                        document.querySelector(".car-container").appendChild(div)
+                    })
+                })
+        }
+    </script>
+</head>
+
+<body onload="bodyLoad()">
+    <header class="shadow-sm bg-white position-fixed top-0 w-100 z-1 border-bottom">
+        <nav class="navbar navbar-expand-lg navbar-light px-lg-4 px-1 py-3">
+            <div class="container-fluid">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                    <i class="bi bi-camera text-primary fs-3"></i>
+                    <h4 class="fw-bold my-auto">Mars Rover Photos</h4>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon" style="height: 24px; font-size: 14px;"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto gap-4 fw-medium">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#" style="text-decoration: underline;">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="text-center mb-5 px-2" style="margin-top: 120px;">
+            <h3 class="fw-bold">Explore Mars Through Stunning Photos</h3>
+            <span>Discover amazing images of Mars taken by the Curiosity rover. See the red planet up close, from its rocky
+                surface to its unique landscapes.</span>
+        </div>
+        <div>
+            <div class="px-4 car-container">
+    
+            </div>
+    
+        </div>
+    </main>
+    <footer class="bg-black text-white py-3 text-center fw-bold">
+        © 2024  NASA API All rights reserved.
+    </footer>
+</body>
+
+</html>
