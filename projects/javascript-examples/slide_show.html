@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FakeStore Slide Show</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+   <style>
+        button {
+            all: unset;
+            
+        }
+        .arrow-icon {
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            border-radius: 50%;
+            padding: 6px;
+        }
+        .arrow-icon:hover {
+            width: 30px;
+            height: 30px;
+            background-color:cornsilk;
+            border-radius: 50%;
+            padding: 6px;
+            transform: scale(1.1);
+        }
+        .play-icon {
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            padding: 6px;
+        }
+        .play-icon:hover{
+            transform: scale(1.1);
+        }
+
+        @media screen and (orientation: landscape) {
+            #card {
+                width: 40%;
+            }
+        }
+
+        @media screen and (orientation: portrait) {
+            #card {
+                width: 90%;
+            }
+        }
+    </style>
+    <script>
+        function bodyLoad(){
+            LoadProduct(1)
+        }
+        function LoadProduct(id){
+            fetch(`./FakeStoreApi/id/fakestoreapi_prod${id}.json`).then(
+                function(res){
+                    return res.json();
+                }
+            ).then(function(data){
+                document.getElementById("main-img").src=data.image;
+                document.getElementById("title").innerHTML=data.title
+                document.getElementById("price").innerHTML=data.price.toLocaleString('en-us',{style:'currency',currency:'USD'})
+                document.getElementById("rating").innerHTML=data.rating.rate
+                
+                
+            })
+        }
+        var count = 1;
+        function handelNextClick(){
+            count++;
+            if(count>20){
+                count=0;
+            }
+            LoadProduct(count)
+            document.getElementById("range").value=count;
+        }
+        function handelPrevClick(){
+            count--;
+           if(count<1){
+            count=20;
+           }
+           LoadProduct(count)
+           document.getElementById("range").value=count;
+        }
+        function handelRangeChange(){
+            var range = document.getElementById("range").value
+            LoadProduct(range)
+        }
+        var thread;
+        function handelPlayClick(){
+            thread = setInterval(handelNextClick,2000)
+            document.getElementById("status").textContent = "Playing.."
+        }
+        function handelPauseClick(){
+           clearInterval(thread)
+           document.getElementById("status").textContent = "Paused..";
+        }
+        
+    </script>
+</head>
+
+<body onload="bodyLoad()" class="d-flex justify-content-center align-items-center" style="height: 100vh; background-color: #F1F2F4;">
+    <div class="bg-white shadow-lg p-4 rounded-4 mx-3 mx-lg-0" id="card">
+        <div style="background: linear-gradient(to right, #c2bebe, #363333a4)" class="position-relative d-flex justify-content-center align-items-center rounded-4">
+            <button onclick="handelPrevClick()" class="position-absolute start-0 top-50 ms-3">
+                <img class="arrow-icon" src="../../images/left-chevron.png" width="100%">
+            </button>
+            <img  id="main-img" width="100%" style="width: 300px;" class="p-4">
+            <button onclick="handelNextClick()" class="position-absolute end-0 top-50 me-3">
+                <img class="arrow-icon" src="../../images/right-chevron.png" width="100%">
+            </button>
+        </div>
+        <div>
+            <div class="d-flex align-items-center mt-3 mb-1 gap-2">
+                <span id="price" style="color: #4F46E5;" class="fw-semibold"></span>
+                <div class="badge bg-success d-flex align-items-center gap-1"><span style="padding-top: 2px;" id="rating"></span><span class="bi bi-star-fill text-white"></span></div>
+            </div>
+            <h6 id="title" class="fw-bold" style="height: 34px;"></h6>
+        </div>
+        <div class="mt-2">
+            <input onchange="handelRangeChange()" value="1" id="range" step="1" min="1" max="20" type="range" class="form-range">
+        </div>
+        <div class="mt-2">
+            <div class="d-flex justify-content-center align-items-center gap-3">
+                <button onclick="handelPlayClick()">
+                    <img style="background-color: #4F46E5;" class="play-icon" src="../../images/icons8-play-96.png"
+                        width="100%">
+                </button>
+                <button onclick="handelPauseClick()">
+                    <img style="background-color: #ff0000;" class="play-icon" src="../../images/icons8-pause-96.png"
+                        width="100%">
+                </button>
+            </div>
+            <span id="status" class="text-center d-block mt-1 fw-semibold" style="font-size: 14px;"></span>
+        </div>
+    </div>
+</body>
+
+</html>
