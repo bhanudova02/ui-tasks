@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script>
+        var userDetials = {
+            Card: '223344422',
+            Cvv: '2244',
+            Year: '2025'
+        }
+        function handelSubmit() {
+            var cardNum = document.getElementById("cardNum").value;
+            var cvv = document.getElementById("cvv").value;
+            var year = document.querySelector('select').value;
+
+            if (userDetials.Card == cardNum) {
+                if (cvv == userDetials.Cvv) {
+                    if (year == userDetials.Year) {
+                        document.write("Success..")
+                    } else {
+                        document.querySelector("p").innerHTML = "Invalid Expiry"
+                    }
+                } else {
+                    document.querySelector("p").innerHTML = "Invalid CVV"
+                }
+            } else {
+                document.querySelector("p").innerHTML = "Invalid Card Number"
+            }
+        }
+    </script>
+</head>
+
+<body class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+    <div>
+         <div class="border p-5 shadow rounded">
+              <h5 class="fw-bold text-primary d-flex gap-1 align-items-center mb-4">Payment Details<i
+                        class="bi bi-credit-card-2-front-fill"></i></h5>
+              <dl>
+                   <dt>Card Number</dt>
+                   <dd class="mb-3"><input id="cardNum" onblur="verifyNumber()" type="text" value="223344422"
+                             class="form-control"></dd>
+                   <dt>CVV</dt>
+                   <dd class="mb-3"><input id="cvv" onblur="verifyCVV()" value="2244" type="text" class="form-control">
+                   </dd>
+                   <dt>Expiry</dt>
+                   <dd>
+                        <select onchange="verifyYear()" class="form-select">
+                             <option>Select Year</option>
+                             <option>2025</option>
+                             <option>2024</option>
+                             <option>2023</option>
+                             <option>2022</option>
+                        </select>
+                   </dd>
+              </dl>
+              <button onclick="handelSubmit()" class="btn btn-success w-100">Submit</button>
+         </div>
+         <p class="mt-2 fw-bold text-danger text-center"></p>
+    </div>
+</body>
+
+</html>
