@@ -38,7 +38,7 @@
           function continueClick() {
                var userId = document.getElementById("userDetials").value;
                if (userId == '') {
-                    document.getElementById('errorMsg').innerHTML = `Please Provide Value`
+                    document.getElementById('errorMsg').innerHTML = `Please Provide User Id`
                } else if (userId == user.email) {
                     flag = `Your email ${userId} verified successfully - Link sent to Email`;
                     document.getElementById("userId").style.display = "none"
