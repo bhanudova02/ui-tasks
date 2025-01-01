@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        dt, dd {
+            margin-bottom: 10px;
+        }
+        input, select {
+            width: 150px;
+        }
+    </style>
+    <script>
+        function CountryChange(){
+             var country = document.getElementById("lstCountries").value;
+             var txtMobile = document.getElementById("txtMobile");
+             switch(country)
+             {
+                case "India":
+                    txtMobile.placeholder = "eg: +91 and 10 digits"
+                    break;
+                case "US":
+                    txtMobile.placeholder = "eg: +(1)(530) 456-5663";
+                    break;
+             }
+        }
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend>Verify Your Mobile</legend>
+        <dl>
+            <dt> <img width="20" border="1" align="left" height="20" style="border-radius: 20px;"> Your Country</dt>
+            <dd>
+                <select id="lstCountries" onchange="CountryChange()">
+                    <option>Select Your Country</option>
+                    <option>India</option>
+                    <option>US</option>
+                    <option>UK</option>
+                </select>
+               
+            </dd>
+            <dt>Your Mobile Number</dt>
+            <dd>
+                <input type="text"  id="txtMobile">
+            </dd>
+        </dl>
+        <button>Verify</button>
+    </fieldset>
+</body>
+</html>
