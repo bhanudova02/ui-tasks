@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cascading Dropdown</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        @media screen and (max-width: 767px) {
+            .card-container {
+                width: 90%;
+            }
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            .card-container{
+                width: 60%;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            .card-container{
+                width: 30%;
+            }
+        }
+    </style>
+    <script>
+        var categories = ["Select Category", "Electronics", "Footwear", "Fashion"];
+        var electronics = ["Select Electronics", "Television", "Mobile", "Watch"];
+        var footwear = ["Select Footwear", "Boots", "Slides", "Shoes"];
+        var fashion = ["Select Fashion", "Kids Fashion", "Men Fashion", "Women Fashion"];
+        var product = []
+        function bodyLoad() {
+
+            categories.map(function (category) {
+                var opt = document.createElement("option");
+                opt.value = category;
+                opt.text = category;
+                document.getElementById("category").appendChild(opt)
+            })
+        }
+
+        function CategoryChange() {
+            var val = document.getElementById("category").value;
+            switch (val) {
+                case 'Electronics':
+                    product = [...electronics];
+                    LoadProduct();
+                    break;
+                case 'Footwear':
+                    product = [...footwear];
+                    LoadProduct();
+                    break;
+                case 'Fashion':
+                    product = [...fashion];
+                    LoadProduct();
+                    break;
+                default:
+                    product = ["Please Select Category"];
+                    LoadProduct();
+                    break;
+
+            }
+        }
+        function LoadProduct() {
+            document.getElementById("product").innerHTML = ""
+            product.map(function (products) {
+                var opt = document.createElement("option");
+                opt.value = products;
+                opt.text = products;
+                document.getElementById("product").appendChild(opt);
+            })
+        }
+    </script>
+</head>
+
+<body onload="bodyLoad()" class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+    <div class="border shadow-sm p-5 card-container">
+        <h5 class="fw-bold mb-3 text-center text-secondary">Cascading Dropdown</h5>
+        <dl>
+            <dt>Select Category</dt>
+            <dd>
+                <select onchange="CategoryChange()" class="form-select" id="category"></select>
+            </dd>
+            <dt class="mt-3">Select Product</dt>
+            <dd>
+                <select class="form-select" id="product"></select>
+            </dd>
+        </dl>
+    </div>
+</body>
+
+</html>
