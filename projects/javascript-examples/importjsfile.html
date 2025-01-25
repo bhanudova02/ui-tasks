@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How To Import JS Files</title>
+</head>
+<body>
+    <h3>How To Import JS Files On HTML Page</h3>
+    
+    <p><b>Step 1:</b> Create a JS file in 'src/scripts/demo.js'</p>
+    <p><b>demo.js:</b></p>
+    <pre>
+        export function Hello(uname){
+            return `Hello ! ${uname}`;
+        }
+
+        export function Addition(a, b){
+            return a + b;
+        }
+
+        export function Multiplication(a, b) {
+            return a * b;
+        }
+    </pre>
+
+    <p><b>Step 2:</b> Create demo.html</p>
+    <p><b>demo.html:</b></p>
+    <pre>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="en"&gt;
+        &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;title&gt;Document&lt;/title&gt;
+            &lt;script type="module"&gt;
+                import { Hello, Addition } from "./src/scripts/demo.js"; 
+                document.querySelector("p").innerHTML = "Addition=" + Addition(10, 20);
+            &lt;/script&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;p&gt;&lt;/p&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+    </pre>
+</body>
+</html>
