@@ -70,19 +70,19 @@
 
             <h5 class="text-center fw-bolder" style="text-decoration: underline;">Geolocation Information</h5>
             <dl>
-                <dt class="fw-bolder">Address</dt>
+                <dt style="font-size: 13.5px;">Address <span class="bi bi-geo text-success"></span> </dt>
                 <dd style="font-size: 14px;" id="address"></dd>
             </dl>
-            <dt>Location</dt>
-            <dd>
+            <dt style="font-size: 13.5px;">Location <span class="bi bi-globe-asia-australia text-success"></span> </dt>
+            <dd class="mt-1">
                 <img  id="map-img" width="100%" class="w-100 object-fit-cover rounded-3 border-dark" style="height: 200px;">
             </dd>
-            <dt class="mt-3">Search Address</dt>
+            <dt  style="font-size: 13.5px;" class="mt-3">Search Address </dt>
             <dd class="input-group mt-1">
                 <input type="text" style="font-size: 14px;" id="lat" placeholder="enter latitude"
-                    class="form-control fw-semibold">
-                <input type="text" style="font-size: 14px;" id="long" placeholder="enter number"
-                    class="form-control fw-semibold">
+                    class="form-control ">
+                <input type="text" style="font-size: 14px;" id="long" placeholder="enter longitude"
+                    class="form-control ">
                 <button class="bi bi-search btn btn-warning" onclick="SearchAddress()"></button>
             </dd>
         </div>
